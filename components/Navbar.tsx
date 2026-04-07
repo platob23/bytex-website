@@ -13,17 +13,20 @@ type NavDict = {
 type Props = {
   lang: string
   nav: NavDict
+  forceScrolled?: boolean
+  altLangHref?: string
 }
 
-export default function Navbar({ lang, nav }: Props) {
-  const [scrolled, setScrolled] = useState(false)
+export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props) {
+  const [scrolled, setScrolled] = useState(forceScrolled ?? false)
   const altLang = lang === 'de' ? 'en' : 'de'
 
   useEffect(() => {
+    if (forceScrolled) return
     const onScroll = () => setScrolled(window.scrollY > 72)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [forceScrolled])
 
   const linkColor = scrolled ? 'var(--text-muted)' : 'rgba(255,255,255,0.7)'
   const linkHoverColor = scrolled ? 'var(--text-primary)' : '#ffffff'
@@ -98,7 +101,7 @@ export default function Navbar({ lang, nav }: Props) {
 
           {/* Lang toggle */}
           <Link
-            href={`/${altLang}`}
+            href={altLangHref ?? `/${altLang}`}
             aria-label={`Switch to ${altLang}`}
             className="nav-globe"
             data-scrolled={scrolled ? 'true' : 'false'}
