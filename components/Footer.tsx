@@ -58,28 +58,6 @@ export default function Footer({ nav, footer, lang }: Props) {
         </div>
       </Container>
 
-      {/* Giant wordmark */}
-      <div style={{ overflow: 'hidden', lineHeight: 1 }}>
-        <Container style={{ overflow: 'hidden' }}>
-          <p
-            aria-hidden="true"
-            style={{
-              fontFamily: 'var(--font-display-family)',
-              fontSize: 'clamp(5.5rem, 19.5vw, 18rem)',
-              fontWeight: 800,
-              letterSpacing: '-0.03em',
-              lineHeight: 0.82,
-              color: 'transparent',
-              WebkitTextStroke: '1px rgba(255, 255, 255, 0.1)',
-              userSelect: 'none',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            BYTEX
-          </p>
-        </Container>
-      </div>
-
       {/* Bottom bar */}
       <Container>
         <div
