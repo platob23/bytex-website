@@ -273,7 +273,7 @@
   font-weight: var(--weight-semibold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--text-muted);
   margin-bottom: 0.5rem;
 }
 
@@ -281,45 +281,41 @@
 .contact-select,
 .contact-textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
   border-radius: 4px;
-  color: #ffffff;
+  color: var(--text-primary);
   font-family: var(--font-body-family);
   font-size: var(--text-sm);
+  line-height: var(--leading-normal);
   padding: 0.75rem 1rem;
   outline: none;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
 }
 
 .contact-input::placeholder,
 .contact-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(0, 0, 0, 0.25);
 }
 
 .contact-select {
   appearance: none;
   cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='rgba(255,255,255,0.35)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='rgba(0,0,0,0.35)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
 }
 
-.contact-select option {
-  background: #0d0d12;
-  color: #ffffff;
-}
-
 .contact-textarea {
   resize: none;
-  min-height: 130px;
+  min-height: 140px;
 }
 
 .contact-input:focus,
 .contact-select:focus,
 .contact-textarea:focus {
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.09);
 }
 
 .contact-btn {

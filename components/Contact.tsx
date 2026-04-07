@@ -65,7 +65,6 @@ export default function Contact({ contact }: Props) {
       style={{
         backgroundColor: '#0d0d12',
         padding: '8rem 0',
-        color: '#ffffff',
       }}
     >
       <Container>
@@ -74,11 +73,11 @@ export default function Contact({ contact }: Props) {
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             gap: '6rem',
-            alignItems: 'start',
+            alignItems: 'center',
           }}
         >
           {/* Left — info */}
-          <div style={{ paddingTop: '0.25rem' }}>
+          <div>
             <p
               style={{
                 color: 'var(--accent)',
@@ -116,37 +115,30 @@ export default function Contact({ contact }: Props) {
             </p>
           </div>
 
-          {/* Right — form */}
-          <div>
+          {/* Right — white card with form */}
+          <div
+            style={{
+              backgroundColor: 'var(--bg-primary)',
+              borderRadius: '4px',
+              padding: '2.5rem',
+            }}
+          >
             {status === 'success' ? (
-              <div
-                style={{
-                  padding: '2rem',
-                  border: '1px solid rgba(0,168,118,0.35)',
-                  borderRadius: '4px',
-                  backgroundColor: 'rgba(0,168,118,0.08)',
-                }}
-              >
+              <div style={{ padding: '1rem 0' }}>
                 <p
                   style={{
-                    fontSize: 'var(--text-sm)',
-                    color: 'var(--success)',
+                    fontSize: 'var(--text-base)',
                     fontWeight: 'var(--weight-semibold)',
+                    color: 'var(--success)',
+                    marginBottom: '0.5rem',
                   }}
                 >
                   {form.success}
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate>
-                <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: '1rem',
-                    marginBottom: '1rem',
-                  }}
-                >
+              <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <div>
                     <label htmlFor="contact-name" className="contact-label">
                       {form.name}
@@ -175,7 +167,7 @@ export default function Contact({ contact }: Props) {
                   </div>
                 </div>
 
-                <div style={{ marginBottom: '1rem' }}>
+                <div>
                   <label htmlFor="contact-service" className="contact-label">
                     {form.service}
                   </label>
@@ -193,7 +185,7 @@ export default function Contact({ contact }: Props) {
                   </select>
                 </div>
 
-                <div style={{ marginBottom: '1.5rem' }}>
+                <div>
                   <label htmlFor="contact-message" className="contact-label">
                     {form.message}
                   </label>
@@ -207,29 +199,21 @@ export default function Contact({ contact }: Props) {
                 </div>
 
                 {status === 'error' && (
-                  <p
-                    style={{
-                      fontSize: 'var(--text-xs)',
-                      color: 'var(--error)',
-                      marginBottom: '1rem',
-                    }}
-                  >
+                  <p style={{ fontSize: 'var(--text-xs)', color: 'var(--error)', marginTop: '-0.25rem' }}>
                     {form.error}
                   </p>
                 )}
 
-                <button
-                  type="submit"
-                  disabled={status === 'sending'}
-                  className="contact-btn"
-                >
-                  {status === 'sending' ? form.sending : form.submit}
-                  {status !== 'sending' && (
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  )}
-                </button>
+                <div>
+                  <button type="submit" disabled={status === 'sending'} className="contact-btn">
+                    {status === 'sending' ? form.sending : form.submit}
+                    {status !== 'sending' && (
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
               </form>
             )}
           </div>
