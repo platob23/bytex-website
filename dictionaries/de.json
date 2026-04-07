@@ -1,0 +1,119 @@
+{
+  "hero": {
+    "eyebrow": "Web Development · SaaS · Branding",
+    "headline": "Digitale Lösungen,\ndie funktionieren.",
+    "subtext": "Individuelle Websites und webbasierte SaaS-Anwendungen für Startups, kleine Unternehmen und Selbständige.",
+    "cta": "Projekt anfragen",
+    "ctaSecondary": "Mehr erfahren"
+  },
+  "nav": {
+    "services": "Leistungen",
+    "references": "Referenzen",
+    "contact": "Kontakt"
+  },
+  "process": {
+    "eyebrow": "Vorgehen",
+    "headline": "So arbeiten wir zusammen",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Erstgespräch",
+        "type": "Kostenlos & unverbindlich",
+        "description": "Wir klären Anforderungen, Ziele und Rahmenbedingungen. Kein Formular — ein echtes Gespräch.",
+        "responsibilities": [
+          "Anforderungen, Ziele und Rahmenbedingungen gemeinsam klären",
+          "Technische Machbarkeit und groben Projektumfang einschätzen",
+          "Kein Formular, keine Agentur-Bürokratie — ein direktes Gespräch"
+        ],
+        "tags": ["Anforderungsanalyse", "Beratung", "Kostenlos"]
+      },
+      {
+        "number": "02",
+        "title": "Konzept & Angebot",
+        "type": "Planung",
+        "description": "Klarer Projektumfang, realistische Zeitplanung und ein transparentes Angebot ohne versteckte Kosten.",
+        "responsibilities": [
+          "Detaillierter Projektumfang und strukturiertes Konzept",
+          "Realistische Zeitplanung mit klar definierten Meilensteinen",
+          "Transparentes Festpreisangebot — keine versteckten Kosten"
+        ],
+        "tags": ["Projektumfang", "Zeitplan", "Festpreis"]
+      },
+      {
+        "number": "03",
+        "title": "Umsetzung",
+        "type": "Kernphase",
+        "description": "Strukturierte Entwicklung mit regelmäßigen Updates. Sie sehen den Fortschritt, bevor er live geht.",
+        "responsibilities": [
+          "Strukturierte Entwicklung in klar abgestimmten Phasen",
+          "Regelmäßige Updates und Zwischenpräsentationen",
+          "Feedback-Schleifen vor dem finalen Go-Live"
+        ],
+        "tags": ["Next.js", "WordPress", "React", "Iterativ"]
+      },
+      {
+        "number": "04",
+        "title": "Launch & Betreuung",
+        "type": "Abschluss & Betrieb",
+        "description": "Saubere Übergabe, Go-Live und auf Wunsch laufende Wartung — damit Ihr Projekt dauerhaft läuft.",
+        "responsibilities": [
+          "Saubere Übergabe aller Zugänge, Dokumentation und Quellcode",
+          "Begleitung beim Go-Live und finaler Qualitätssicherung",
+          "Optionale Wartung, Hosting und laufende Betreuung"
+        ],
+        "tags": ["Go-Live", "Hosting", "Wartung", "Support"]
+      }
+    ]
+  },
+  "references": {
+    "eyebrow": "Referenzen",
+    "headline": "Ausgewählte Projekte",
+    "projects": [
+      {
+        "number": "01",
+        "name": "CityGlow",
+        "description": "Marketing-Website für eine Event-Discovery-App. Modernes, energiereiches Design mit klarem Fokus auf mobile Nutzererfahrung und App-Downloads.",
+        "category": "App Marketing Website",
+        "tags": ["Web Design", "App Marketing", "Next.js"],
+        "url": "https://cityglow.app",
+        "domain": "cityglow.app"
+      },
+      {
+        "number": "02",
+        "name": "Jurifor",
+        "description": "Professioneller Webauftritt für eine Rechtsberatung. Klare Struktur, vertrauensbildendes Design und unkomplizierte Kontaktaufnahme im Vordergrund.",
+        "category": "Kanzlei-Website",
+        "tags": ["Corporate", "WordPress", "Legal"],
+        "url": "https://jurifor.at",
+        "domain": "jurifor.at"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Leistungen",
+    "headline": "Was ich für Sie umsetze",
+    "cta": "Projekt anfragen",
+    "items": [
+      {
+        "number": "01",
+        "title": "Web Development",
+        "description": "Funktionale, technisch saubere Websites mit klarer Struktur und guter Performance. Umsetzung überwiegend mit WordPress – flexibel, erweiterbar und langfristig wartbar."
+      },
+      {
+        "number": "02",
+        "title": "SaaS Lösungen",
+        "description": "Webbasierte Anwendungen, die exakt auf Ihr Geschäftsmodell abgestimmt sind. Kunden- und Benutzerportale, Dashboards, Buchungssysteme oder individuelle Tools zur Prozessautomatisierung."
+      },
+      {
+        "number": "03",
+        "title": "Branding & Grafik",
+        "description": "Logos, Farbkonzepte und Grafiken, die digital und im Print funktionieren. Kein Trend-Design – sondern ein Erscheinungsbild, das zur Marke passt und langfristig trägt."
+      },
+      {
+        "number": "04",
+        "title": "Hosting & Wartung",
+        "description": "Sicheres Hosting, regelmäßige Backups und technische Wartung auf Wunsch. Ihr Projekt bleibt dauerhaft erreichbar, aktuell und geschützt."
+      }
+    ]
+  }
+}

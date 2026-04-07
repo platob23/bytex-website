@@ -1,0 +1,119 @@
+{
+  "hero": {
+    "eyebrow": "Web Development · SaaS · Branding",
+    "headline": "Digital solutions\nthat work.",
+    "subtext": "Custom websites and web-based SaaS applications for startups, small businesses, and independent professionals.",
+    "cta": "Start a project",
+    "ctaSecondary": "Learn more"
+  },
+  "nav": {
+    "services": "Services",
+    "references": "References",
+    "contact": "Contact"
+  },
+  "process": {
+    "eyebrow": "Process",
+    "headline": "How we work together",
+    "steps": [
+      {
+        "number": "01",
+        "title": "First call",
+        "type": "Free & non-binding",
+        "description": "We clarify requirements, goals, and constraints. No form — a real conversation.",
+        "responsibilities": [
+          "Clarify requirements, goals, and project constraints together",
+          "Assess technical feasibility and rough project scope",
+          "No forms, no agency bureaucracy — a direct conversation"
+        ],
+        "tags": ["Requirements", "Consulting", "Free"]
+      },
+      {
+        "number": "02",
+        "title": "Concept & proposal",
+        "type": "Planning",
+        "description": "Clear project scope, realistic timeline, and a transparent quote with no hidden costs.",
+        "responsibilities": [
+          "Detailed project scope and structured concept",
+          "Realistic timeline with clearly defined milestones",
+          "Transparent fixed-price quote — no hidden costs"
+        ],
+        "tags": ["Scope", "Timeline", "Fixed price"]
+      },
+      {
+        "number": "03",
+        "title": "Development",
+        "type": "Core phase",
+        "description": "Structured build with regular updates. You see progress before it goes live.",
+        "responsibilities": [
+          "Structured development in clearly defined phases",
+          "Regular updates and interim reviews",
+          "Feedback loops before the final go-live"
+        ],
+        "tags": ["Next.js", "WordPress", "React", "Iterative"]
+      },
+      {
+        "number": "04",
+        "title": "Launch & support",
+        "type": "Handover & operations",
+        "description": "Clean handover, go-live, and optional ongoing maintenance — so your project keeps running.",
+        "responsibilities": [
+          "Clean handover of all credentials, documentation, and source code",
+          "Go-live support and final quality assurance",
+          "Optional maintenance, hosting, and ongoing care"
+        ],
+        "tags": ["Go-Live", "Hosting", "Maintenance", "Support"]
+      }
+    ]
+  },
+  "references": {
+    "eyebrow": "References",
+    "headline": "Selected projects",
+    "projects": [
+      {
+        "number": "01",
+        "name": "CityGlow",
+        "description": "Marketing website for an event discovery app. Modern, high-energy design with a clear focus on mobile user experience and app downloads.",
+        "category": "App Marketing Website",
+        "tags": ["Web Design", "App Marketing", "Next.js"],
+        "url": "https://cityglow.app",
+        "domain": "cityglow.app"
+      },
+      {
+        "number": "02",
+        "name": "Jurifor",
+        "description": "Professional web presence for a legal consultancy. Clean structure, trust-building design, and straightforward contact flow at the forefront.",
+        "category": "Law Firm Website",
+        "tags": ["Corporate", "WordPress", "Legal"],
+        "url": "https://jurifor.at",
+        "domain": "jurifor.at"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "headline": "What I build for you",
+    "cta": "Start a project",
+    "items": [
+      {
+        "number": "01",
+        "title": "Web Development",
+        "description": "Functional, technically clean websites with clear structure and solid performance. Built primarily with WordPress — flexible, extendable, and maintainable long-term."
+      },
+      {
+        "number": "02",
+        "title": "SaaS Solutions",
+        "description": "Web-based applications tailored precisely to your business model. Client portals, dashboards, booking systems, or custom tools for process automation."
+      },
+      {
+        "number": "03",
+        "title": "Branding & Graphics",
+        "description": "Logos, color concepts, and graphics that work both digitally and in print. No trend-chasing — a visual identity that fits your brand and stands the test of time."
+      },
+      {
+        "number": "04",
+        "title": "Hosting & Maintenance",
+        "description": "Secure hosting, regular backups, and technical maintenance on request. Your project stays reachable, up to date, and protected."
+      }
+    ]
+  }
+}
