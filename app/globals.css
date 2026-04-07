@@ -538,6 +538,8 @@
 }
 
 .faq-trigger:hover .faq-icon[data-open='true'] {
+  background-color: var(--accent);
+  border-color: var(--accent);
   color: #ffffff;
 }
 
