@@ -89,6 +89,31 @@
       }
     ]
   },
+  "contact": {
+    "eyebrow": "Contact",
+    "headline": "Start a project",
+    "subtext": "Briefly describe what you need — I'll get back to you within 24 hours.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Smith",
+      "email": "Email",
+      "emailPlaceholder": "john@example.com",
+      "service": "What do you need?",
+      "serviceOptions": [
+        "Website / Landing Page",
+        "SaaS / Web App",
+        "Branding & Graphics",
+        "Hosting & Maintenance",
+        "Other"
+      ],
+      "message": "Message",
+      "messagePlaceholder": "Briefly describe what you have in mind...",
+      "submit": "Send request",
+      "sending": "Sending...",
+      "success": "Thanks! I'll be in touch soon.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
   "faq": {
     "eyebrow": "FAQ",
     "headline": "Recently asked questions",

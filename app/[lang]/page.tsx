@@ -6,6 +6,7 @@ import Services from '../../components/Services'
 import References from '../../components/References'
 import Process from '../../components/Process'
 import FAQ from '../../components/FAQ'
+import Contact from '../../components/Contact'
 
 export default async function Page({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params
@@ -23,6 +24,7 @@ export default async function Page({ params }: PageProps<'/[lang]'>) {
         <Process process={dict.process} />
         <References references={dict.references} />
         <FAQ faq={dict.faq} />
+        <Contact contact={dict.contact} />
       </main>
     </>
   )

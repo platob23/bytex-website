@@ -89,6 +89,31 @@
       }
     ]
   },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "headline": "Projekt anfragen",
+    "subtext": "Kurz beschreiben, was du brauchst – ich melde mich innerhalb von 24 Stunden.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Max Mustermann",
+      "email": "E-Mail",
+      "emailPlaceholder": "max@beispiel.at",
+      "service": "Was benötigst du?",
+      "serviceOptions": [
+        "Website / Landingpage",
+        "SaaS / Web-App",
+        "Branding & Grafik",
+        "Hosting & Wartung",
+        "Sonstiges"
+      ],
+      "message": "Nachricht",
+      "messagePlaceholder": "Kurz beschreiben, was du dir vorstellst...",
+      "submit": "Anfrage senden",
+      "sending": "Wird gesendet...",
+      "success": "Danke! Ich melde mich bald.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuche es nochmal."
+    }
+  },
   "faq": {
     "eyebrow": "FAQ",
     "headline": "Kürzlich gestellte Fragen",
