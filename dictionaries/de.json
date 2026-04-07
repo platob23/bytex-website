@@ -97,13 +97,13 @@
   "contact": {
     "eyebrow": "Kontakt",
     "headline": "Projekt anfragen",
-    "subtext": "Kurz beschreiben, was du brauchst – ich melde mich innerhalb von 24 Stunden.",
+    "subtext": "Kurz beschreiben, was Sie benötigen – ich melde mich innerhalb von 24 Stunden.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Max Mustermann",
       "email": "E-Mail",
       "emailPlaceholder": "max@beispiel.at",
-      "service": "Was benötigst du?",
+      "service": "Was benötigen Sie?",
       "serviceOptions": [
         "Website / Landingpage",
         "SaaS / Web-App",
@@ -112,7 +112,7 @@
         "Sonstiges"
       ],
       "message": "Nachricht",
-      "messagePlaceholder": "Kurz beschreiben, was du dir vorstellst...",
+      "messagePlaceholder": "Kurz beschreiben, was Sie sich vorstellen...",
       "submit": "Anfrage senden",
       "sending": "Wird gesendet...",
       "success": "Danke! Ich melde mich bald.",
