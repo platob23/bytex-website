@@ -120,23 +120,17 @@ export default function FAQ({ faq }: Props) {
           </div>
 
           {/* Right — image */}
-          <div
-            style={{
-              position: 'sticky',
-              top: '8rem',
-              aspectRatio: '4 / 5',
-              borderRadius: '4px',
-              overflow: 'hidden',
-            }}
-          >
-            <Image
-              src="/question.jpg"
-              alt=""
-              fill
-              style={{ objectFit: 'cover' }}
-              quality={90}
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+          <div style={{ position: 'sticky', top: '8rem', aspectRatio: '4 / 5' }}>
+            <div style={{ position: 'relative', width: '100%', height: '100%', borderRadius: '4px', overflow: 'hidden' }}>
+              <Image
+                src="/question.jpg"
+                alt=""
+                fill
+                style={{ objectFit: 'cover' }}
+                quality={90}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
       </Container>
