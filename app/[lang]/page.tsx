@@ -27,7 +27,7 @@ export default async function Page({ params }: PageProps<'/[lang]'>) {
         <FAQ faq={dict.faq} />
         <Contact contact={dict.contact} />
       </main>
-      <Footer nav={dict.nav} footer={dict.footer} />
+      <Footer nav={dict.nav} footer={dict.footer} lang={lang} />
     </>
   )
 }

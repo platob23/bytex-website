@@ -8,14 +8,17 @@ type Nav = {
 
 type FooterDict = {
   cta: string
+  impressum: string
+  datenschutz: string
 }
 
 type Props = {
   nav: Nav
   footer: FooterDict
+  lang: string
 }
 
-export default function Footer({ nav, footer }: Props) {
+export default function Footer({ nav, footer, lang }: Props) {
   return (
     <footer style={{ backgroundColor: '#080810' }}>
 
@@ -97,9 +100,11 @@ export default function Footer({ nav, footer }: Props) {
           >
             © {new Date().getFullYear()} Bytex · Tobias Plank
           </span>
-          <a href="mailto:office@bytex.at" className="footer-email">
-            office@bytex.at
-          </a>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+            <a href={`/${lang}/impressum`} className="footer-email">{footer.impressum}</a>
+            <a href={`/${lang}/datenschutz`} className="footer-email">{footer.datenschutz}</a>
+            <a href="mailto:office@bytex.at" className="footer-email">office@bytex.at</a>
+          </div>
         </div>
       </Container>
 
