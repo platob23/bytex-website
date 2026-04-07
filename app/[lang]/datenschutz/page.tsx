@@ -1,4 +1,7 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+
+export const metadata: Metadata = { title: 'Datenschutzerklärung' }
 import { getDictionary, hasLocale } from '../dictionaries'
 import Navbar from '../../../components/Navbar'
 import Footer from '../../../components/Footer'
