@@ -15,7 +15,7 @@ type Props = {
 
 export default function Hero({ hero }: Props) {
   return (
-    <section className="relative h-screen min-h-[600px]">
+    <section className="relative h-screen min-h-[600px]" aria-label="Hero">
       {/* Background image */}
       <Image
         src="/hero-bg.jpg"
@@ -111,7 +111,7 @@ export default function Hero({ hero }: Props) {
                   borderBottom: '1px solid rgba(255,255,255,0.3)',
                 }}
               >
-                {hero.ctaSecondary} →
+                {hero.ctaSecondary} <span aria-hidden="true">→</span>
               </a>
             </div>
 

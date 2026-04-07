@@ -24,6 +24,7 @@ export default function References({ references }: Props) {
   return (
     <section
       id="references"
+      aria-labelledby="references-heading"
       style={{
         backgroundColor: 'var(--bg-primary)',
         padding: '8rem 0',
@@ -43,19 +44,9 @@ export default function References({ references }: Props) {
           }}
         >
           <div>
-            <p
-              style={{
-                color: 'var(--accent)',
-                fontSize: 'var(--text-xs)',
-                fontWeight: 'var(--weight-semibold)',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                marginBottom: '1rem',
-              }}
-            >
-              {references.eyebrow}
-            </p>
+            <p className="eyebrow" style={{ marginBottom: '1rem' }}>{references.eyebrow}</p>
             <h2
+              id="references-heading"
               style={{
                 fontFamily: 'var(--font-body-family)',
                 fontSize: 'clamp(2rem, 4vw, 3rem)',
@@ -110,7 +101,7 @@ export default function References({ references }: Props) {
                 <span className="project-category">{project.category}</span>
                 <span className="project-link">
                   {project.domain}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M7 17L17 7"/>
                     <path d="M7 7h10v10"/>
                   </svg>

@@ -9,6 +9,7 @@ type ServiceItem = {
 type ServicesDict = {
   eyebrow: string
   headline: string
+  subtext: string
   cta: string
   items: ServiceItem[]
 }
@@ -21,6 +22,7 @@ export default function Services({ services }: Props) {
   return (
     <section
       id="services"
+      aria-labelledby="services-heading"
       style={{
         backgroundColor: 'var(--bg-primary)',
         padding: '8rem 0',
@@ -39,19 +41,9 @@ export default function Services({ services }: Props) {
           }}
         >
           <div>
-            <p
-              style={{
-                color: 'var(--accent)',
-                fontSize: 'var(--text-xs)',
-                fontWeight: 'var(--weight-semibold)',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                marginBottom: '1rem',
-              }}
-            >
-              {services.eyebrow}
-            </p>
+            <p className="eyebrow" style={{ marginBottom: '1rem' }}>{services.eyebrow}</p>
             <h2
+              id="services-heading"
               style={{
                 fontFamily: 'var(--font-body-family)',
                 fontSize: 'clamp(2rem, 4vw, 3rem)',
@@ -74,7 +66,7 @@ export default function Services({ services }: Props) {
               justifySelf: 'end',
             }}
           >
-            {services.items.length} Leistungsbereiche — von der ersten Idee bis zum laufenden Betrieb.
+            {services.subtext}
           </p>
         </div>
 
@@ -114,7 +106,7 @@ export default function Services({ services }: Props) {
             }}
           >
             {services.cta}
-            <span style={{ fontSize: '1rem' }}>→</span>
+            <span aria-hidden="true" style={{ fontSize: '1rem' }}>→</span>
           </a>
         </div>
 

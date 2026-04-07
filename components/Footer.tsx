@@ -41,6 +41,7 @@ export default function Footer({ nav, footer, lang }: Props) {
           <a href="#contact" className="footer-cta">
             {footer.cta}
             <svg
+              aria-hidden="true"
               width="16"
               height="16"
               viewBox="0 0 24 24"
