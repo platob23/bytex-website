@@ -14,6 +14,7 @@
   "process": {
     "eyebrow": "Process",
     "headline": "How we work together",
+    "subtext": "From the first call to ongoing operations — transparent and without surprises.",
     "steps": [
       {
         "number": "01",
@@ -116,7 +117,10 @@
       "submit": "Send request",
       "sending": "Sending...",
       "success": "Thanks! I'll be in touch soon.",
-      "error": "Something went wrong. Please try again."
+      "error": "Something went wrong. Please try again.",
+      "errRequired": "Required",
+      "errEmail": "Invalid email address",
+      "errSelect": "Please select"
     }
   },
   "faq": {
@@ -141,6 +145,7 @@
   "services": {
     "eyebrow": "Services",
     "headline": "What I build for you",
+    "subtext": "Four service areas — from the first idea to ongoing operation.",
     "cta": "Start a project",
     "items": [
       {

@@ -14,6 +14,7 @@
   "process": {
     "eyebrow": "Vorgehen",
     "headline": "So arbeiten wir zusammen",
+    "subtext": "Vom ersten Gespräch bis zum laufenden Betrieb — transparent und ohne Überraschungen.",
     "steps": [
       {
         "number": "01",
@@ -116,7 +117,10 @@
       "submit": "Anfrage senden",
       "sending": "Wird gesendet...",
       "success": "Danke! Ich melde mich bald.",
-      "error": "Etwas ist schiefgelaufen. Bitte versuche es nochmal."
+      "error": "Etwas ist schiefgelaufen. Bitte versuche es nochmal.",
+      "errRequired": "Pflichtfeld",
+      "errEmail": "Ungültige E-Mail-Adresse",
+      "errSelect": "Bitte auswählen"
     }
   },
   "faq": {
@@ -141,6 +145,7 @@
   "services": {
     "eyebrow": "Leistungen",
     "headline": "Was ich für Sie umsetze",
+    "subtext": "Vier Leistungsbereiche — von der ersten Idee bis zum laufenden Betrieb.",
     "cta": "Projekt anfragen",
     "items": [
       {
