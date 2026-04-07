@@ -7,7 +7,7 @@ type Nav = {
 }
 
 type FooterDict = {
-  cta: string
+  statement: string
   impressum: string
   datenschutz: string
 }
@@ -22,7 +22,7 @@ export default function Footer({ nav, footer, lang }: Props) {
   return (
     <footer style={{ backgroundColor: '#080810' }}>
 
-      {/* Top row — nav + CTA */}
+      {/* Top row — brand left, nav right */}
       <Container>
         <div
           style={{
@@ -30,31 +30,42 @@ export default function Footer({ nav, footer, lang }: Props) {
             justifyContent: 'space-between',
             alignItems: 'flex-start',
             padding: '5rem 0 4.5rem',
+            gap: '4rem',
           }}
         >
-          <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+          {/* Left — logo + statement */}
+          <div>
+            <p
+              style={{
+                fontFamily: 'var(--font-display-family)',
+                fontWeight: 'var(--weight-extrabold)',
+                fontSize: 'var(--text-2xl)',
+                letterSpacing: '-0.03em',
+                color: '#ffffff',
+                marginBottom: '1rem',
+              }}
+            >
+              Bytex
+            </p>
+            <p
+              style={{
+                fontSize: 'var(--text-sm)',
+                color: 'rgba(255,255,255,0.35)',
+                lineHeight: 'var(--leading-snug)',
+                whiteSpace: 'pre-line',
+                maxWidth: '260px',
+              }}
+            >
+              {footer.statement}
+            </p>
+          </div>
+
+          {/* Right — nav links */}
+          <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', alignItems: 'flex-end' }}>
             <a href="#services" className="footer-link">{nav.services}</a>
             <a href="#references" className="footer-link">{nav.references}</a>
             <a href="#contact" className="footer-link">{nav.contact}</a>
           </nav>
-
-          <a href="#contact" className="footer-cta">
-            {footer.cta}
-            <svg
-              aria-hidden="true"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.75"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M7 17L17 7" />
-              <path d="M7 7h10v10" />
-            </svg>
-          </a>
         </div>
       </Container>
 
@@ -67,7 +78,6 @@ export default function Footer({ nav, footer, lang }: Props) {
             justifyContent: 'space-between',
             alignItems: 'center',
             padding: '1.5rem 0',
-            marginTop: '2rem',
           }}
         >
           <span
