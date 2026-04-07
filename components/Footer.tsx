@@ -59,7 +59,7 @@ export default function Footer({ nav, footer, lang }: Props) {
 
       {/* Giant wordmark */}
       <div style={{ overflow: 'hidden', lineHeight: 1 }}>
-        <Container>
+        <Container style={{ overflow: 'hidden' }}>
           <p
             aria-hidden="true"
             style={{
