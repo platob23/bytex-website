@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import Image from 'next/image'
 import Container from './Container'
 
 type FaqItem = {
@@ -34,7 +35,7 @@ function FaqRow({ item, index }: { item: FaqItem; index: number }) {
       >
         <span className="faq-question">{item.question}</span>
         <span className="faq-icon" data-open={open ? 'true' : 'false'} aria-hidden="true">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+          <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
             <line x1="6" y1="0" x2="6" y2="12" />
             <line x1="0" y1="6" x2="12" y2="6" />
           </svg>
@@ -58,6 +59,7 @@ export default function FAQ({ faq }: Props) {
   return (
     <section
       id="faq"
+      aria-labelledby="faq-heading"
       style={{
         backgroundColor: 'var(--bg-secondary)',
         padding: '8rem 0',
@@ -74,19 +76,9 @@ export default function FAQ({ faq }: Props) {
         >
           {/* Left — accordion */}
           <div>
-            <p
-              style={{
-                color: 'var(--accent)',
-                fontSize: 'var(--text-xs)',
-                fontWeight: 'var(--weight-semibold)',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                marginBottom: '1rem',
-              }}
-            >
-              {faq.eyebrow}
-            </p>
+            <p className="eyebrow" style={{ marginBottom: '1rem' }}>{faq.eyebrow}</p>
             <h2
+              id="faq-heading"
               style={{
                 fontFamily: 'var(--font-body-family)',
                 fontSize: 'clamp(2rem, 4vw, 3rem)',
@@ -118,30 +110,18 @@ export default function FAQ({ faq }: Props) {
             </div>
           </div>
 
-          {/* Right — image placeholder */}
-          <div
-            style={{
-              position: 'sticky',
-              top: '8rem',
-              aspectRatio: '4 / 5',
-              borderRadius: '4px',
-              backgroundColor: 'var(--bg-card)',
-              overflow: 'hidden',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <span
-              style={{
-                fontSize: 'var(--text-xs)',
-                color: 'var(--text-muted)',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-              }}
-            >
-              Image
-            </span>
+          {/* Right — image */}
+          <div style={{ position: 'sticky', top: '8rem', aspectRatio: '4 / 5' }}>
+            <div style={{ position: 'relative', width: '100%', height: '100%', borderRadius: '4px', overflow: 'hidden' }}>
+              <Image
+                src="/question.jpg"
+                alt=""
+                fill
+                style={{ objectFit: 'cover' }}
+                quality={90}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
       </Container>

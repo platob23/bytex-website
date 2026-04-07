@@ -16,6 +16,9 @@ type ContactForm = {
   sending: string
   success: string
   error: string
+  errRequired: string
+  errEmail: string
+  errSelect: string
 }
 
 type ContactDict = {
@@ -29,15 +32,40 @@ type Props = {
   contact: ContactDict
 }
 
+type FieldErrors = {
+  name?: string
+  email?: string
+  service?: string
+  message?: string
+}
+
 export default function Contact({ contact }: Props) {
   const { form } = contact
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [errors, setErrors] = useState<FieldErrors>({})
+
+  function validate(data: FormData): FieldErrors {
+    const errs: FieldErrors = {}
+    if (!data.get('name')) errs.name = form.errRequired
+    const email = data.get('email') as string
+    if (!email) errs.email = form.errRequired
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.email = form.errEmail
+    if (!data.get('service')) errs.service = form.errSelect
+    if (!data.get('message')) errs.message = form.errRequired
+    return errs
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    const data = new FormData(e.currentTarget)
+    const errs = validate(data)
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs)
+      return
+    }
+    setErrors({})
     setStatus('sending')
 
-    const data = new FormData(e.currentTarget)
     const payload = {
       access_key: '4a3757cc-cf86-4c7f-9eae-e5b95c9e97d2',
       name: data.get('name'),
@@ -62,35 +90,17 @@ export default function Contact({ contact }: Props) {
   return (
     <section
       id="contact"
-      style={{
-        backgroundColor: '#0d0d12',
-        padding: '8rem 0',
-      }}
+      aria-labelledby="contact-heading"
+      style={{ backgroundColor: '#0d0d12', padding: '8rem 0' }}
     >
       <Container>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '6rem',
-            alignItems: 'center',
-          }}
-        >
-          {/* Left — info */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center' }}>
+
+          {/* Left */}
           <div>
-            <p
-              style={{
-                color: 'var(--accent)',
-                fontSize: 'var(--text-xs)',
-                fontWeight: 'var(--weight-semibold)',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                marginBottom: '1rem',
-              }}
-            >
-              {contact.eyebrow}
-            </p>
+            <p className="eyebrow" style={{ marginBottom: '1rem' }}>{contact.eyebrow}</p>
             <h2
+              id="contact-heading"
               style={{
                 fontFamily: 'var(--font-body-family)',
                 fontSize: 'clamp(2rem, 4vw, 3rem)',
@@ -103,36 +113,16 @@ export default function Contact({ contact }: Props) {
             >
               {contact.headline}
             </h2>
-            <p
-              style={{
-                fontSize: 'var(--text-sm)',
-                color: 'rgba(255,255,255,0.45)',
-                lineHeight: 'var(--leading-loose)',
-                maxWidth: '340px',
-              }}
-            >
+            <p style={{ fontSize: 'var(--text-sm)', color: 'rgba(255,255,255,0.55)', lineHeight: 'var(--leading-loose)', maxWidth: '340px' }}>
               {contact.subtext}
             </p>
           </div>
 
-          {/* Right — white card with form */}
-          <div
-            style={{
-              backgroundColor: 'var(--bg-primary)',
-              borderRadius: '4px',
-              padding: '2.5rem',
-            }}
-          >
+          {/* Right — white card */}
+          <div style={{ backgroundColor: 'var(--bg-primary)', borderRadius: '4px', padding: '2.5rem' }}>
             {status === 'success' ? (
               <div style={{ padding: '1rem 0' }}>
-                <p
-                  style={{
-                    fontSize: 'var(--text-base)',
-                    fontWeight: 'var(--weight-semibold)',
-                    color: 'var(--success)',
-                    marginBottom: '0.5rem',
-                  }}
-                >
+                <p style={{ fontSize: 'var(--text-base)', fontWeight: 'var(--weight-semibold)', color: 'var(--success)' }}>
                   {form.success}
                 </p>
               </div>
@@ -140,66 +130,70 @@ export default function Contact({ contact }: Props) {
               <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <div>
-                    <label htmlFor="contact-name" className="contact-label">
-                      {form.name}
-                    </label>
+                    <label htmlFor="contact-name" className="contact-label">{form.name}</label>
                     <input
                       id="contact-name"
                       name="name"
                       type="text"
-                      required
                       placeholder={form.namePlaceholder}
                       className="contact-input"
+                      aria-invalid={errors.name ? 'true' : undefined}
+                      aria-describedby={errors.name ? 'err-name' : undefined}
+                      onChange={() => setErrors(e => ({ ...e, name: undefined }))}
                     />
+                    {errors.name && <p id="err-name" className="contact-field-error" role="alert">{errors.name}</p>}
                   </div>
                   <div>
-                    <label htmlFor="contact-email" className="contact-label">
-                      {form.email}
-                    </label>
+                    <label htmlFor="contact-email" className="contact-label">{form.email}</label>
                     <input
                       id="contact-email"
                       name="email"
                       type="email"
-                      required
                       placeholder={form.emailPlaceholder}
                       className="contact-input"
+                      aria-invalid={errors.email ? 'true' : undefined}
+                      aria-describedby={errors.email ? 'err-email' : undefined}
+                      onChange={() => setErrors(e => ({ ...e, email: undefined }))}
                     />
+                    {errors.email && <p id="err-email" className="contact-field-error" role="alert">{errors.email}</p>}
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="contact-service" className="contact-label">
-                    {form.service}
-                  </label>
+                  <label htmlFor="contact-service" className="contact-label">{form.service}</label>
                   <select
                     id="contact-service"
                     name="service"
-                    required
                     defaultValue=""
                     className="contact-select"
+                    aria-invalid={errors.service ? 'true' : undefined}
+                    aria-describedby={errors.service ? 'err-service' : undefined}
+                    onChange={() => setErrors(e => ({ ...e, service: undefined }))}
                   >
                     <option value="" disabled>—</option>
                     {form.serviceOptions.map((opt) => (
                       <option key={opt} value={opt}>{opt}</option>
                     ))}
                   </select>
+                  {errors.service && <p id="err-service" className="contact-field-error" role="alert">{errors.service}</p>}
                 </div>
 
                 <div>
-                  <label htmlFor="contact-message" className="contact-label">
-                    {form.message}
-                  </label>
+                  <label htmlFor="contact-message" className="contact-label">{form.message}</label>
                   <textarea
                     id="contact-message"
                     name="message"
-                    required
                     placeholder={form.messagePlaceholder}
                     className="contact-textarea"
+                    aria-invalid={errors.message ? 'true' : undefined}
+                    aria-describedby={errors.message ? 'err-message' : undefined}
+                    onChange={() => setErrors(e => ({ ...e, message: undefined }))}
                   />
+                  {errors.message && <p id="err-message" className="contact-field-error" role="alert">{errors.message}</p>}
                 </div>
 
                 {status === 'error' && (
-                  <p style={{ fontSize: 'var(--text-xs)', color: 'var(--error)', marginTop: '-0.25rem' }}>
+                  <p style={{ fontSize: 'var(--text-xs)', color: 'var(--error)', marginTop: '-0.25rem' }} role="alert">
                     {form.error}
                   </p>
                 )}
@@ -208,7 +202,7 @@ export default function Contact({ contact }: Props) {
                   <button type="submit" disabled={status === 'sending'} className="contact-btn">
                     {status === 'sending' ? form.sending : form.submit}
                     {status !== 'sending' && (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                       </svg>
                     )}

@@ -14,6 +14,7 @@
   "process": {
     "eyebrow": "Vorgehen",
     "headline": "So arbeiten wir zusammen",
+    "subtext": "Vom ersten Gespräch bis zum laufenden Betrieb — transparent und ohne Überraschungen.",
     "steps": [
       {
         "number": "01",
@@ -97,13 +98,13 @@
   "contact": {
     "eyebrow": "Kontakt",
     "headline": "Projekt anfragen",
-    "subtext": "Kurz beschreiben, was du brauchst – ich melde mich innerhalb von 24 Stunden.",
+    "subtext": "Kurz beschreiben, was Sie benötigen – ich melde mich innerhalb von 24 Stunden.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Max Mustermann",
       "email": "E-Mail",
       "emailPlaceholder": "max@beispiel.at",
-      "service": "Was benötigst du?",
+      "service": "Was benötigen Sie?",
       "serviceOptions": [
         "Website / Landingpage",
         "SaaS / Web-App",
@@ -112,11 +113,14 @@
         "Sonstiges"
       ],
       "message": "Nachricht",
-      "messagePlaceholder": "Kurz beschreiben, was du dir vorstellst...",
+      "messagePlaceholder": "Kurz beschreiben, was Sie sich vorstellen...",
       "submit": "Anfrage senden",
       "sending": "Wird gesendet...",
       "success": "Danke! Ich melde mich bald.",
-      "error": "Etwas ist schiefgelaufen. Bitte versuche es nochmal."
+      "error": "Etwas ist schiefgelaufen. Bitte versuche es nochmal.",
+      "errRequired": "Pflichtfeld",
+      "errEmail": "Ungültige E-Mail-Adresse",
+      "errSelect": "Bitte auswählen"
     }
   },
   "faq": {
@@ -141,12 +145,13 @@
   "services": {
     "eyebrow": "Leistungen",
     "headline": "Was ich für Sie umsetze",
+    "subtext": "Vier Leistungsbereiche — von der ersten Idee bis zum laufenden Betrieb.",
     "cta": "Projekt anfragen",
     "items": [
       {
         "number": "01",
         "title": "Web Development",
-        "description": "Funktionale, technisch saubere Websites mit klarer Struktur und guter Performance. Umsetzung überwiegend mit WordPress – flexibel, erweiterbar und langfristig wartbar."
+        "description": "Kein WordPress, kein Baukastensystem – jede Website wird von Grund auf selbst entwickelt. Vollständig individueller Code bedeutet maximale Performance, saubere Struktur und technisches SEO auf einem Level, das Standardlösungen schlicht nicht erreichen."
       },
       {
         "number": "02",
