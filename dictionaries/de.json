@@ -89,6 +89,25 @@
       }
     ]
   },
+  "faq": {
+    "eyebrow": "FAQ",
+    "headline": "Kürzlich gestellte Fragen",
+    "subtext": "Die wichtigsten Antworten auf einen Blick. Und wenn noch etwas offen bleibt – einfach fragen!",
+    "items": [
+      {
+        "question": "Wie lange dauert es, bis meine Website fertig ist?",
+        "answer": "Das hängt vom Umfang ab. Eine einfache Website ist oft in 2–4 Wochen fertig. Komplexere Projekte mit individuellen Funktionen können 6–10 Wochen in Anspruch nehmen. Im Konzept-Schritt legen wir gemeinsam einen realistischen Zeitplan fest."
+      },
+      {
+        "question": "Kann ich später noch Änderungen machen lassen?",
+        "answer": "Ja, selbstverständlich. Nach dem Launch biete ich auf Wunsch laufende Wartung und Anpassungen an. Kleinere Änderungen sind oft kurzfristig umsetzbar – sprechen Sie mich einfach an."
+      },
+      {
+        "question": "Wie viel kostet eine individuelle SaaS-Lösung?",
+        "answer": "Der Preis richtet sich nach Funktionsumfang, Komplexität und Zeitplan. Ich arbeite grundsätzlich mit Festpreisangeboten – keine versteckten Kosten. Nach einem kurzen Erstgespräch erhalten Sie ein konkretes Angebot."
+      }
+    ]
+  },
   "services": {
     "eyebrow": "Leistungen",
     "headline": "Was ich für Sie umsetze",

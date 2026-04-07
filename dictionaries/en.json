@@ -89,6 +89,25 @@
       }
     ]
   },
+  "faq": {
+    "eyebrow": "FAQ",
+    "headline": "Recently asked questions",
+    "subtext": "The most important answers at a glance. And if something is still open — just ask!",
+    "items": [
+      {
+        "question": "How long does it take until my website is finished?",
+        "answer": "It depends on the scope. A simple website is often done in 2–4 weeks. More complex projects with custom functionality can take 6–10 weeks. During the concept phase, we define a realistic timeline together."
+      },
+      {
+        "question": "Can I have changes made later?",
+        "answer": "Yes, of course. After launch I offer ongoing maintenance and adjustments on request. Minor changes can often be implemented quickly — just reach out."
+      },
+      {
+        "question": "How much does a custom SaaS solution cost?",
+        "answer": "The price depends on the scope of features, complexity, and timeline. I work with fixed-price quotes — no hidden costs. After a short initial call, you'll receive a concrete proposal."
+      }
+    ]
+  },
   "services": {
     "eyebrow": "Services",
     "headline": "What I build for you",

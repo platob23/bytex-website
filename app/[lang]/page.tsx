@@ -5,6 +5,7 @@ import Hero from '../../components/Hero'
 import Services from '../../components/Services'
 import References from '../../components/References'
 import Process from '../../components/Process'
+import FAQ from '../../components/FAQ'
 
 export default async function Page({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params
@@ -21,6 +22,7 @@ export default async function Page({ params }: PageProps<'/[lang]'>) {
         <Services services={dict.services} />
         <Process process={dict.process} />
         <References references={dict.references} />
+        <FAQ faq={dict.faq} />
       </main>
     </>
   )
