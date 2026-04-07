@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import Image from 'next/image'
 import Container from './Container'
 
 type FaqItem = {
@@ -118,30 +119,24 @@ export default function FAQ({ faq }: Props) {
             </div>
           </div>
 
-          {/* Right — image placeholder */}
+          {/* Right — image */}
           <div
             style={{
               position: 'sticky',
               top: '8rem',
               aspectRatio: '4 / 5',
               borderRadius: '4px',
-              backgroundColor: 'var(--bg-card)',
               overflow: 'hidden',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
             }}
           >
-            <span
-              style={{
-                fontSize: 'var(--text-xs)',
-                color: 'var(--text-muted)',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-              }}
-            >
-              Image
-            </span>
+            <Image
+              src="/question.jpg"
+              alt=""
+              fill
+              style={{ objectFit: 'cover' }}
+              quality={90}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
         </div>
       </Container>
