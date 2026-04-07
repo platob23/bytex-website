@@ -89,6 +89,10 @@
       }
     ]
   },
+  "footer": {
+    "cta": "Projekt anfragen",
+    "copyright": "© 2025 Bytex · Tobias Plank"
+  },
   "contact": {
     "eyebrow": "Kontakt",
     "headline": "Projekt anfragen",

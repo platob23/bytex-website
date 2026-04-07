@@ -7,6 +7,7 @@ import References from '../../components/References'
 import Process from '../../components/Process'
 import FAQ from '../../components/FAQ'
 import Contact from '../../components/Contact'
+import Footer from '../../components/Footer'
 
 export default async function Page({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params
@@ -26,6 +27,7 @@ export default async function Page({ params }: PageProps<'/[lang]'>) {
         <FAQ faq={dict.faq} />
         <Contact contact={dict.contact} />
       </main>
+      <Footer nav={dict.nav} footer={dict.footer} />
     </>
   )
 }

@@ -89,6 +89,10 @@
       }
     ]
   },
+  "footer": {
+    "cta": "Start a project",
+    "copyright": "© 2025 Bytex · Tobias Plank"
+  },
   "contact": {
     "eyebrow": "Contact",
     "headline": "Start a project",

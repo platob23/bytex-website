@@ -266,6 +266,36 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
+/* ── Footer ───────────────────────────────────────── */
+.footer-link {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.footer-cta:hover {
+  color: #ffffff;
+  gap: 0.9rem;
+}
+
 /* ── Contact ──────────────────────────────────────── */
 .contact-label {
   display: block;
