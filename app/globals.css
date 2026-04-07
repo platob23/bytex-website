@@ -387,21 +387,54 @@
 }
 
 /* ── Legal pages ──────────────────────────────────── */
+.legal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-bottom: 3.5rem;
+}
+
+.legal-back:hover {
+  color: var(--text-primary);
+}
+
 .legal-section {
-  margin-bottom: 2.5rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.legal-section:last-of-type {
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-num {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
 }
 
 .legal-h2 {
-  font-size: var(--text-base);
+  font-size: 1.05rem;
   font-weight: var(--weight-bold);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  line-height: var(--leading-snug);
   color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .legal-p {
   font-size: var(--text-sm);
-  line-height: var(--leading-loose);
+  line-height: 1.85;
   color: var(--text-muted);
 }
 
@@ -411,20 +444,28 @@
 
 .legal-dl {
   display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 0.25rem 1.5rem;
+  grid-template-columns: 10rem 1fr;
   font-size: var(--text-sm);
-  line-height: var(--leading-loose);
 }
 
 .legal-dt {
-  color: var(--text-primary);
-  font-weight: var(--weight-semibold);
-  white-space: nowrap;
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .legal-dd {
-  color: var(--text-muted);
+  color: var(--text-primary);
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  line-height: var(--leading-normal);
+}
+
+.legal-dt:first-of-type,
+.legal-dd:first-of-type {
+  border-top: 1px solid var(--border);
 }
 
 .legal-link {
