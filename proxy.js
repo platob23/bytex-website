@@ -11,11 +11,15 @@ function getLocale(request) {
 export function proxy(request) {
   const { pathname } = request.nextUrl
 
-  const hasLocale = locales.some(
+  const detectedLocale = locales.find(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
 
-  if (hasLocale) return
+  if (detectedLocale) {
+    const response = NextResponse.next()
+    response.headers.set('x-lang', detectedLocale)
+    return response
+  }
 
   const locale = getLocale(request)
   request.nextUrl.pathname = `/${locale}${pathname}`
