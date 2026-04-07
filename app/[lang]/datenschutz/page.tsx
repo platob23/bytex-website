@@ -79,8 +79,8 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ la
           <div className="legal-section">
             <h2 className="legal-h2">5. Hosting</h2>
             <p className="legal-p">
-              Diese Website wird bei einem externen Hosting-Anbieter betrieben. {/* [HOSTING-ANBIETER EINTRAGEN] */}
-              Beim Aufruf der Website werden durch den Hosting-Anbieter automatisch sogenannte Server-Logfiles erfasst. Dazu gehören: IP-Adresse, Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners sowie Zeitpunkt der Serveranfrage. Diese Daten sind nicht einer bestimmten Person zuordbar und werden nicht mit anderen Datenquellen zusammengeführt.
+              Diese Website wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA gehostet (<a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="legal-link">vercel.com/legal/privacy-policy</a>).
+              Beim Aufruf der Website werden durch Vercel automatisch sogenannte Server-Logfiles erfasst. Dazu gehören: IP-Adresse, Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners sowie Zeitpunkt der Serveranfrage. Diese Daten sind nicht einer bestimmten Person zuordbar und werden nicht mit anderen Datenquellen zusammengeführt.
             </p>
             <p className="legal-p">
               Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren und fehlerfreien Betrieb der Website).
