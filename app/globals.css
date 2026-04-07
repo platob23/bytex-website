@@ -537,6 +537,10 @@
   transform: rotate(45deg);
 }
 
+.faq-trigger:hover .faq-icon[data-open='true'] {
+  color: #ffffff;
+}
+
 .faq-body {
   display: grid;
   grid-template-rows: 0fr;
