@@ -19,8 +19,8 @@ export default async function Page({ params }: PageProps<'/[lang]'>) {
       <main>
         <Hero hero={dict.hero} />
         <Services services={dict.services} />
-        <References references={dict.references} />
         <Process process={dict.process} />
+        <References references={dict.references} />
       </main>
     </>
   )
