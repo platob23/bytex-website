@@ -8,7 +8,6 @@ type Nav = {
 
 type FooterDict = {
   cta: string
-  copyright: string
 }
 
 type Props = {
@@ -96,7 +95,7 @@ export default function Footer({ nav, footer }: Props) {
               letterSpacing: '0.03em',
             }}
           >
-            {footer.copyright}
+            © {new Date().getFullYear()} Bytex · Tobias Plank
           </span>
           <a href="mailto:office@bytex.at" className="footer-email">
             office@bytex.at
