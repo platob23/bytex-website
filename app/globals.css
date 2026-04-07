@@ -296,6 +296,18 @@
   gap: 0.9rem;
 }
 
+.footer-email {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease;
+}
+
+.footer-email:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* ── Contact ──────────────────────────────────────── */
 .contact-label {
   display: block;

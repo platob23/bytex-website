@@ -98,18 +98,7 @@ export default function Footer({ nav, footer }: Props) {
           >
             {footer.copyright}
           </span>
-          <a
-            href="mailto:office@bytex.at"
-            style={{
-              fontSize: 'var(--text-xs)',
-              color: 'rgba(255, 255, 255, 0.25)',
-              textDecoration: 'none',
-              letterSpacing: '0.03em',
-              transition: 'color 0.2s ease',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.25)')}
-          >
+          <a href="mailto:office@bytex.at" className="footer-email">
             office@bytex.at
           </a>
         </div>
