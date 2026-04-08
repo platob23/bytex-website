@@ -60,20 +60,11 @@ export default function FAQ({ faq }: Props) {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      style={{
-        backgroundColor: 'var(--bg-secondary)',
-        padding: '8rem 0',
-      }}
+      className="section-py"
+      style={{ backgroundColor: 'var(--bg-secondary)' }}
     >
       <Container>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '5rem',
-            alignItems: 'start',
-          }}
-        >
+        <div className="faq-grid">
           {/* Left — accordion */}
           <div>
             <p className="eyebrow" style={{ marginBottom: '1rem' }}>{faq.eyebrow}</p>
@@ -111,17 +102,15 @@ export default function FAQ({ faq }: Props) {
           </div>
 
           {/* Right — image */}
-          <div style={{ position: 'sticky', top: '8rem', aspectRatio: '4 / 5' }}>
-            <div style={{ position: 'relative', width: '100%', height: '100%', borderRadius: '4px', overflow: 'hidden' }}>
-              <Image
-                src="/question.jpg"
-                alt=""
-                fill
-                style={{ objectFit: 'cover' }}
-                quality={90}
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
+          <div className="faq-img-col" style={{ position: 'relative' }}>
+            <Image
+              src="/question.jpg"
+              alt=""
+              fill
+              style={{ objectFit: 'cover' }}
+              quality={90}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
         </div>
       </Container>

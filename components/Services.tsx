@@ -23,23 +23,13 @@ export default function Services({ services }: Props) {
     <section
       id="services"
       aria-labelledby="services-heading"
-      style={{
-        backgroundColor: 'var(--bg-primary)',
-        padding: '8rem 0',
-      }}
+      className="section-py"
+      style={{ backgroundColor: 'var(--bg-primary)' }}
     >
       <Container>
 
         {/* Section header */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            alignItems: 'end',
-            marginBottom: '5rem',
-            gap: '2rem',
-          }}
-        >
+        <div className="services-header">
           <div>
             <p className="eyebrow" style={{ marginBottom: '1rem' }}>{services.eyebrow}</p>
             <h2

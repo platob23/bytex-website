@@ -25,10 +25,8 @@ export default function References({ references }: Props) {
     <section
       id="references"
       aria-labelledby="references-heading"
-      style={{
-        backgroundColor: 'var(--bg-primary)',
-        padding: '8rem 0',
-      }}
+      className="section-py"
+      style={{ backgroundColor: 'var(--bg-primary)' }}
     >
       <Container>
 
