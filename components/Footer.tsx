@@ -24,15 +24,7 @@ export default function Footer({ nav, footer, lang }: Props) {
 
       {/* Top row — brand left, nav right */}
       <Container>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'flex-start',
-            padding: '5rem 0 4.5rem',
-            gap: '4rem',
-          }}
-        >
+        <div className="footer-top-row">
           {/* Left — logo + statement */}
           <div>
             <p
@@ -61,7 +53,7 @@ export default function Footer({ nav, footer, lang }: Props) {
           </div>
 
           {/* Right — nav links */}
-          <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', alignItems: 'flex-end' }}>
+          <nav className="footer-nav">
             <a href="#services" className="footer-link">{nav.services}</a>
             <a href="#references" className="footer-link">{nav.references}</a>
             <a href="#contact" className="footer-link">{nav.contact}</a>
@@ -71,15 +63,7 @@ export default function Footer({ nav, footer, lang }: Props) {
 
       {/* Bottom bar */}
       <Container>
-        <div
-          style={{
-            borderTop: '1px solid rgba(255, 255, 255, 0.07)',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '1.5rem 0',
-          }}
-        >
+        <div className="footer-bottom-bar">
           <span
             style={{
               fontSize: 'var(--text-xs)',
@@ -89,7 +73,7 @@ export default function Footer({ nav, footer, lang }: Props) {
           >
             © {new Date().getFullYear()} Bytex · Tobias Plank
           </span>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <div className="footer-legal">
             <a href={`/${lang}/impressum`} className="footer-email">{footer.impressum}</a>
             <a href={`/${lang}/datenschutz`} className="footer-email">{footer.datenschutz}</a>
             <a href="mailto:office@bytex.at" className="footer-email">office@bytex.at</a>

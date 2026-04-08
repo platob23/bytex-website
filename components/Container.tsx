@@ -9,11 +9,10 @@ type Props = {
 export default function Container({ children, className, style }: Props) {
   return (
     <div
-      className={className}
+      className={`container-inner${className ? ` ${className}` : ''}`}
       style={{
         maxWidth: '1280px',
         margin: '0 auto',
-        padding: '0 2rem',
         width: '100%',
         ...style,
       }}

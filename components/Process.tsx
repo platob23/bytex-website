@@ -223,17 +223,12 @@ function ProfessionalTimeline({ steps }: { steps: Step[] }) {
 // ── Section ────────────────────────────────────────────────────────────────
 export default function Process({ process }: Props) {
   return (
-    <section style={{ backgroundColor: "#0d0d12", color: "#ffffff", padding: "8rem 0" }} aria-labelledby="process-heading">
+    <section className="section-py" style={{ backgroundColor: "#0d0d12", color: "#ffffff" }} aria-labelledby="process-heading">
       <Container>
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1.4fr",
-          gap: "4rem",
-          alignItems: "start",
-        }}>
+        <div className="process-grid">
 
           {/* Left */}
-          <div style={{ position: "sticky", top: "8rem" }}>
+          <div className="process-left">
             <p className="eyebrow" style={{ marginBottom: "1.25rem" }}>{process.eyebrow}</p>
             <h2 id="process-heading" style={{
               fontFamily: "var(--font-body-family)",

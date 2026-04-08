@@ -91,10 +91,11 @@ export default function Contact({ contact }: Props) {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      style={{ backgroundColor: '#0d0d12', padding: '8rem 0' }}
+      className="section-py"
+      style={{ backgroundColor: '#0d0d12' }}
     >
       <Container>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center' }}>
+        <div className="contact-grid">
 
           {/* Left */}
           <div>
@@ -128,7 +129,7 @@ export default function Contact({ contact }: Props) {
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="contact-fields-row">
                   <div>
                     <label htmlFor="contact-name" className="contact-label">{form.name}</label>
                     <input
