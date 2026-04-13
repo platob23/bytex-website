@@ -9,7 +9,10 @@
   "nav": {
     "services": "Leistungen",
     "references": "Referenzen",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "ariaMenuOpen": "Menü schließen",
+    "ariaMenuClose": "Menü öffnen",
+    "ariaMobileNav": "Mobilmenü"
   },
   "process": {
     "eyebrow": "Vorgehen",
@@ -69,6 +72,8 @@
   "references": {
     "eyebrow": "Referenzen",
     "headline": "Ausgewählte Projekte",
+    "projectCount": "Projekte",
+    "visitLabel": "besuchen",
     "projects": [
       {
         "number": "01",

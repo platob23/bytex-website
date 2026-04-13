@@ -13,6 +13,8 @@ type Project = {
 type ReferencesDict = {
   eyebrow: string
   headline: string
+  projectCount: string
+  visitLabel: string
   projects: Project[]
 }
 
@@ -65,7 +67,7 @@ export default function References({ references }: Props) {
               letterSpacing: '0.04em',
             }}
           >
-            {references.projects.length} Projekte
+            {references.projects.length} {references.projectCount}
           </p>
         </div>
 
@@ -78,7 +80,7 @@ export default function References({ references }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               className="project-row"
-              aria-label={`${project.name} besuchen — ${project.domain}`}
+              aria-label={`${project.name} ${references.visitLabel} — ${project.domain}`}
             >
               {/* Number */}
               <span className="project-number">{project.number}</span>

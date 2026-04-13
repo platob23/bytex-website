@@ -1,4 +1,5 @@
 import { Geist, Syne } from 'next/font/google'
+import { headers } from 'next/headers'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-sans', subsets: ['latin'] })
@@ -8,9 +9,27 @@ const syne = Syne({
   weight: ['400', '600', '700', '800'],
 })
 
-export default function NotFound() {
+const content = {
+  de: {
+    headline: 'Seite nicht gefunden.',
+    subtext: 'Die gesuchte Seite existiert nicht oder wurde verschoben.',
+    cta: 'Zur Startseite',
+  },
+  en: {
+    headline: 'Page not found.',
+    subtext: "The page you're looking for doesn't exist or has been moved.",
+    cta: 'Back to home',
+  },
+}
+
+export default async function NotFound() {
+  const headersList = await headers()
+  const acceptLang = headersList.get('accept-language') ?? ''
+  const lang = acceptLang.toLowerCase().startsWith('de') ? 'de' : 'en'
+  const t = content[lang]
+
   return (
-    <html className={`${geistSans.variable} ${syne.variable}`}>
+    <html lang={lang} className={`${geistSans.variable} ${syne.variable}`}>
       <body
         style={{
           margin: 0,
@@ -23,12 +42,7 @@ export default function NotFound() {
           justifyContent: 'center',
         }}
       >
-        <div
-          style={{
-            textAlign: 'center',
-            padding: '2rem',
-          }}
-        >
+        <div style={{ textAlign: 'center', padding: '2rem' }}>
           <p
             style={{
               fontSize: '0.75rem',
@@ -51,7 +65,7 @@ export default function NotFound() {
               marginBottom: '1.25rem',
             }}
           >
-            Page not found.
+            {t.headline}
           </h1>
           <p
             style={{
@@ -62,26 +76,26 @@ export default function NotFound() {
               margin: '0 auto 2.5rem',
             }}
           >
-            The page you&apos;re looking for doesn&apos;t exist or has been moved.
+            {t.subtext}
           </p>
           <a
-            href="/"
+            href={`/${lang}`}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.5rem',
-              padding: '0.85rem 2rem',
+              gap: '0.625rem',
+              padding: '1rem 2.25rem',
               backgroundColor: 'var(--accent)',
               color: '#ffffff',
               fontSize: '0.875rem',
               fontWeight: 600,
-              letterSpacing: '0.02em',
+              letterSpacing: '0.03em',
               textDecoration: 'none',
               borderRadius: '4px',
             }}
           >
-            Back to home
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            {t.cta}
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
