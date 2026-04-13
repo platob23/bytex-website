@@ -850,6 +850,7 @@ body {
     gap: 2.5rem;
   }
   .contact-fields-row { grid-template-columns: 1fr; }
+  .contact-card { padding: 1.5rem; }
 
   .footer-top-row {
     flex-direction: column;
