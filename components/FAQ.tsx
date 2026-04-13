@@ -102,7 +102,7 @@ export default function FAQ({ faq }: Props) {
           </div>
 
           {/* Right — image */}
-          <div className="faq-img-col" style={{ position: 'relative' }}>
+          <div className="faq-img-col">
             <Image
               src="/question.jpg"
               alt=""
