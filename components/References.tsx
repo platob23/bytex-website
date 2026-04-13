@@ -60,15 +60,6 @@ export default function References({ references }: Props) {
             </h2>
           </div>
 
-          <p
-            style={{
-              fontSize: 'var(--text-sm)',
-              color: 'var(--text-muted)',
-              letterSpacing: '0.04em',
-            }}
-          >
-            {references.projects.length} {references.projectCount}
-          </p>
         </div>
 
         {/* Project rows */}
