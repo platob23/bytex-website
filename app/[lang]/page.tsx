@@ -8,6 +8,7 @@ import Process from '../../components/Process'
 import FAQ from '../../components/FAQ'
 import Contact from '../../components/Contact'
 import Footer from '../../components/Footer'
+import BackToTop from '../../components/BackToTop'
 
 export default async function Page({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params
@@ -28,6 +29,7 @@ export default async function Page({ params }: PageProps<'/[lang]'>) {
         <Contact contact={dict.contact} />
       </main>
       <Footer nav={dict.nav} footer={dict.footer} lang={lang} />
+      <BackToTop />
     </>
   )
 }

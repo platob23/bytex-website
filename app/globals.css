@@ -641,6 +641,20 @@
   overflow: hidden;
 }
 
+.timeline-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-body[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+
+.timeline-body-inner {
+  overflow: hidden;
+}
+
 .faq-answer {
   font-size: var(--text-sm);
   line-height: var(--leading-loose);
@@ -653,6 +667,11 @@
 @theme inline {
   --color-background: var(--bg-primary);
   --color-foreground: var(--text-primary);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -694,13 +713,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .faq-img-col {
-  position: sticky;
-  top: 8rem;
-  aspect-ratio: 4 / 5;
+  position: relative;
+  min-height: 320px;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -747,6 +765,63 @@ body {
   gap: 1.5rem;
 }
 
+/* ── ArrowButton ──────────────────────────────────── */
+.arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem 2.25rem;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  font-family: var(--font-body-family);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.12s ease, transform 0.15s ease;
+}
+
+.arrow-btn--primary {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.arrow-btn--primary:hover:not(:disabled) {
+  background-color: #e8601e;
+  transform: translateY(-1px);
+}
+
+.arrow-btn--dark {
+  background-color: var(--text-primary);
+  color: #fff;
+}
+
+.arrow-btn--dark:hover:not(:disabled) {
+  background-color: #151520;
+  transform: translateY(-1px);
+}
+
+.arrow-btn:active:not(:disabled) {
+  transform: translateY(0);
+  transition-duration: 0.05s;
+}
+
+.arrow-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.arrow-btn__arrow {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.18s ease;
+}
+
+.arrow-btn:hover:not(:disabled) .arrow-btn__arrow {
+  transform: translateX(4px);
+}
+
 /* ── Mobile overrides ─────────────────────────────── */
 @media (max-width: 767px) {
   .container-inner { padding-left: 1.25rem; padding-right: 1.25rem; }
@@ -775,6 +850,7 @@ body {
     gap: 2.5rem;
   }
   .contact-fields-row { grid-template-columns: 1fr; }
+  .contact-card { padding: 1.5rem; }
 
   .footer-top-row {
     flex-direction: column;

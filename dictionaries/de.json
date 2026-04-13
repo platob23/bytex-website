@@ -9,7 +9,10 @@
   "nav": {
     "services": "Leistungen",
     "references": "Referenzen",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "ariaMenuOpen": "Menü schließen",
+    "ariaMenuClose": "Menü öffnen",
+    "ariaMobileNav": "Mobilmenü"
   },
   "process": {
     "eyebrow": "Vorgehen",
@@ -69,6 +72,8 @@
   "references": {
     "eyebrow": "Referenzen",
     "headline": "Ausgewählte Projekte",
+    "projectCount": "Projekte",
+    "visitLabel": "besuchen",
     "projects": [
       {
         "number": "01",
@@ -117,6 +122,9 @@
       "submit": "Anfrage senden",
       "sending": "Wird gesendet...",
       "success": "Danke! Ich melde mich bald.",
+      "successTitle": "Nachricht erhalten.",
+      "successBody": "Danke für Ihre Anfrage — ich melde mich innerhalb von 24 Stunden.",
+      "backToForm": "Neue Anfrage stellen",
       "error": "Etwas ist schiefgelaufen. Bitte versuche es nochmal.",
       "errRequired": "Pflichtfeld",
       "errEmail": "Ungültige E-Mail-Adresse",

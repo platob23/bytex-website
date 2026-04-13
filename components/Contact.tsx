@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Container from './Container'
+import ArrowButton from './ArrowButton'
 
 type ContactForm = {
   name: string
@@ -15,6 +16,9 @@ type ContactForm = {
   submit: string
   sending: string
   success: string
+  successTitle: string
+  successBody: string
+  backToForm: string
   error: string
   errRequired: string
   errEmail: string
@@ -120,12 +124,42 @@ export default function Contact({ contact }: Props) {
           </div>
 
           {/* Right — white card */}
-          <div style={{ backgroundColor: 'var(--bg-primary)', borderRadius: '4px', padding: '2.5rem' }}>
+          <div className="contact-card" style={{ backgroundColor: 'var(--bg-primary)', borderRadius: '4px', padding: '2.5rem' }}>
             {status === 'success' ? (
-              <div style={{ padding: '1rem 0' }}>
-                <p style={{ fontSize: 'var(--text-base)', fontWeight: 'var(--weight-semibold)', color: 'var(--success)' }}>
-                  {form.success}
-                </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: '0.5rem 0' }}>
+                <div style={{
+                  width: '44px', height: '44px', borderRadius: '50%', flexShrink: 0,
+                  backgroundColor: 'rgba(0,168,118,0.08)',
+                  border: '1px solid rgba(0,168,118,0.25)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <p style={{ fontSize: 'var(--text-lg)', fontWeight: 'var(--weight-bold)', color: 'var(--text-primary)', letterSpacing: '-0.01em' }}>
+                    {form.successTitle}
+                  </p>
+                  <p style={{ fontSize: 'var(--text-sm)', color: 'var(--text-muted)', lineHeight: 'var(--leading-loose)' }}>
+                    {form.successBody}
+                  </p>
+                </div>
+                <button
+                  onClick={() => setStatus('idle')}
+                  style={{
+                    display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                    background: 'none', border: '1px solid var(--border)',
+                    borderRadius: '4px', padding: '0.625rem 1.25rem',
+                    fontSize: 'var(--text-sm)', color: 'var(--text-muted)',
+                    cursor: 'pointer', width: 'fit-content',
+                    transition: 'border-color 0.15s ease, color 0.15s ease',
+                  }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--text-primary)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--text-primary)' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--border)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--text-muted)' }}
+                >
+                  {form.backToForm}
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
@@ -200,14 +234,14 @@ export default function Contact({ contact }: Props) {
                 )}
 
                 <div>
-                  <button type="submit" disabled={status === 'sending'} className="contact-btn">
+                  <ArrowButton
+                    type="submit"
+                    disabled={status === 'sending'}
+                    showArrow={status !== 'sending'}
+                    style={{ width: '100%', justifyContent: 'center' }}
+                  >
                     {status === 'sending' ? form.sending : form.submit}
-                    {status !== 'sending' && (
-                      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                      </svg>
-                    )}
-                  </button>
+                  </ArrowButton>
                 </div>
               </form>
             )}

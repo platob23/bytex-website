@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Container from './Container'
+import ArrowButton from './ArrowButton'
 
 type HeroDict = {
   eyebrow: string
@@ -80,40 +81,14 @@ export default function Hero({ hero }: Props) {
               {hero.subtext}
             </p>
 
-            {/* CTAs */}
-            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
-              <a
-                href="#contact"
-                style={{
-                  display: 'inline-block',
-                  backgroundColor: 'var(--accent)',
-                  color: '#fff',
-                  padding: '0.875rem 2rem',
-                  fontSize: 'var(--text-sm)',
-                  fontWeight: 'var(--weight-semibold)' as React.CSSProperties['fontWeight'],
-                  letterSpacing: '0.02em',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                }}
-              >
-                {hero.cta}
-              </a>
-              <a
-                href="#services"
-                style={{
-                  display: 'inline-block',
-                  color: 'rgba(255,255,255,0.75)',
-                  fontSize: 'var(--text-sm)',
-                  fontWeight: 'var(--weight-regular)' as React.CSSProperties['fontWeight'],
-                  letterSpacing: '0.02em',
-                  textDecoration: 'none',
-                  padding: '0.875rem 0',
-                  borderBottom: '1px solid rgba(255,255,255,0.3)',
-                }}
-              >
-                {hero.ctaSecondary} <span aria-hidden="true">→</span>
-              </a>
-            </div>
+            {/* CTA */}
+            <ArrowButton
+              href="#contact"
+              variant="primary"
+              style={{ padding: '1.125rem 2.5rem', fontSize: 'var(--text-base)' }}
+            >
+              {hero.cta}
+            </ArrowButton>
 
           </div>
         </Container>

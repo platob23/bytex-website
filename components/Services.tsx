@@ -1,4 +1,5 @@
 import Container from './Container'
+import ArrowButton from './ArrowButton'
 
 type ServiceItem = {
   number: string
@@ -72,32 +73,8 @@ export default function Services({ services }: Props) {
         </div>
 
         {/* CTA */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            paddingTop: '3rem',
-          }}
-        >
-          <a
-            href="#contact"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.625rem',
-              backgroundColor: 'var(--text-primary)',
-              color: '#fff',
-              padding: '1rem 2.25rem',
-              fontSize: 'var(--text-sm)',
-              fontWeight: 'var(--weight-semibold)',
-              letterSpacing: '0.02em',
-              textDecoration: 'none',
-              borderRadius: '4px',
-            }}
-          >
-            {services.cta}
-            <span aria-hidden="true" style={{ fontSize: '1rem' }}>→</span>
-          </a>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', paddingTop: '3rem' }}>
+          <ArrowButton href="#contact" variant="dark">{services.cta}</ArrowButton>
         </div>
 
       </Container>

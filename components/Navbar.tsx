@@ -8,6 +8,9 @@ type NavDict = {
   services: string
   references: string
   contact: string
+  ariaMenuOpen: string
+  ariaMenuClose: string
+  ariaMobileNav: string
 }
 
 type Props = {
@@ -117,22 +120,25 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
               style={{
                 display: 'flex',
                 alignItems: 'center',
+                gap: '0.2rem',
+                fontSize: 'var(--text-xs)',
+                fontWeight: 'var(--weight-semibold)',
+                letterSpacing: '0.08em',
+                textDecoration: 'none',
                 color: scrolled ? 'var(--text-muted)' : 'rgba(255,255,255,0.55)',
                 transition: 'color 0.2s ease, opacity 0.2s ease',
               }}
             >
-              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M2 12h20" />
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-              </svg>
+              <span style={{ color: scrolled ? 'var(--text-primary)' : '#fff', opacity: 0.9 }}>{lang.toUpperCase()}</span>
+              <span style={{ opacity: 0.3 }}>/</span>
+              <span>{altLang.toUpperCase()}</span>
             </Link>
           </div>
 
           {/* Hamburger */}
           <button
             className="nav-hamburger"
-            aria-label={menuOpen ? 'Menü schließen' : 'Menü öffnen'}
+            aria-label={menuOpen ? nav.ariaMenuOpen : nav.ariaMenuClose}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(v => !v)}
             style={{ color: scrolled || menuOpen ? 'var(--text-primary)' : '#ffffff' }}
@@ -152,7 +158,7 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
 
       {/* Mobile menu */}
       {menuOpen && (
-        <nav className="nav-mobile-menu" aria-label="Mobilmenü">
+        <nav className="nav-mobile-menu" aria-label={nav.ariaMobileNav}>
           {navItems.map(({ label, href }) => (
             <a
               key={href}

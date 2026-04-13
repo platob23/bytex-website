@@ -173,11 +173,17 @@ const TimelineItem = memo(function TimelineItem({
             </div>
           </button>
 
-          {expanded && (
-            <div id={contentId} role="region" aria-labelledby={headerId}>
+          <div
+            id={contentId}
+            role="region"
+            aria-labelledby={headerId}
+            className="timeline-body"
+            data-open={expanded ? 'true' : 'false'}
+          >
+            <div className="timeline-body-inner">
               <TimelineItemContent step={step} />
             </div>
-          )}
+          </div>
         </div>
       </div>
     </li>
@@ -186,17 +192,10 @@ const TimelineItem = memo(function TimelineItem({
 
 // ── Main Timeline ──────────────────────────────────────────────────────────
 function ProfessionalTimeline({ steps }: { steps: Step[] }) {
-  const [expanded, setExpanded] = useState<Set<string>>(
-    () => new Set([steps[0]?.number])
-  );
+  const [expanded, setExpanded] = useState<string | null>(steps[0]?.number ?? null);
 
   const onToggle = useCallback((id: string) => {
-    setExpanded((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
+    setExpanded((prev) => prev === id ? null : id);
   }, []);
 
   return (
@@ -212,7 +211,7 @@ function ProfessionalTimeline({ steps }: { steps: Step[] }) {
           key={step.number}
           step={step}
           index={i}
-          expanded={expanded.has(step.number)}
+          expanded={expanded === step.number}
           onToggle={onToggle}
         />
       ))}
