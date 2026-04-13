@@ -44,11 +44,13 @@ export async function generateMetadata({ params }: LayoutProps<'/[lang]'>): Prom
       siteName: 'Bytex',
       locale: lang === 'de' ? 'de_AT' : 'en_US',
       type: 'website',
+      images: [{ url: '/hero-bg.jpg', width: 1200, height: 800, alt: m.title }],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: m.title,
       description: m.description,
+      images: ['/hero-bg.jpg'],
     },
     robots: { index: true, follow: true },
   }
