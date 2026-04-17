@@ -891,8 +891,8 @@ body {
   }
   .footer-legal { flex-direction: column; gap: 0.5rem; }
 
-  .project-row { grid-template-columns: 2.5rem 1fr; }
-  .project-meta { display: none; }
+  .project-row { grid-template-columns: 2.5rem 1fr auto; }
+  .project-category { display: none; }
   .project-row:hover {
     padding-left: 0;
     padding-right: 0;
