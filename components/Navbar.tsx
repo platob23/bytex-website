@@ -7,6 +7,7 @@ import Container from './Container'
 type NavDict = {
   services: string
   references: string
+  faq: string
   contact: string
   ariaLabelOpen: string
   ariaLabelClosed: string
@@ -51,6 +52,7 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
   const navItems = [
     { label: nav.services, href: '#services' },
     { label: nav.references, href: '#references' },
+    { label: nav.faq, href: '#faq' },
     { label: nav.contact, href: '#contact' },
   ]
 
