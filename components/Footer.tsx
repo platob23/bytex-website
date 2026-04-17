@@ -4,6 +4,7 @@ import Container from './Container'
 type Nav = {
   services: string
   references: string
+  faq: string
   contact: string
 }
 
@@ -62,6 +63,7 @@ export default function Footer({ nav, footer, lang }: Props) {
           <nav className="footer-nav">
             <a href="#services" className="footer-link">{nav.services}</a>
             <a href="#references" className="footer-link">{nav.references}</a>
+            <a href="#faq" className="footer-link">{nav.faq}</a>
             <a href="#contact" className="footer-link">{nav.contact}</a>
           </nav>
         </div>
