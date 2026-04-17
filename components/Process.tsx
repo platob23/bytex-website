@@ -228,7 +228,7 @@ export default function Process({ process }: Props) {
 
           {/* Left */}
           <div className="process-left">
-            <p className="eyebrow" style={{ marginBottom: "1.25rem" }}>{process.eyebrow}</p>
+            <p className="eyebrow eyebrow--on-dark" style={{ marginBottom: "1.25rem" }}>{process.eyebrow}</p>
             <h2 id="process-heading" style={{
               fontFamily: "var(--font-body-family)",
               fontSize: "clamp(2rem, 3.5vw, 2.75rem)",

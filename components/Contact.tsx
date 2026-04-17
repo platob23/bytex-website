@@ -103,7 +103,7 @@ export default function Contact({ contact }: Props) {
 
           {/* Left */}
           <div>
-            <p className="eyebrow" style={{ marginBottom: '1rem' }}>{contact.eyebrow}</p>
+            <p className="eyebrow eyebrow--on-dark" style={{ marginBottom: '1rem' }}>{contact.eyebrow}</p>
             <h2
               id="contact-heading"
               style={{
