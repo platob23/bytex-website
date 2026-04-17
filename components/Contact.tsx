@@ -103,7 +103,7 @@ export default function Contact({ contact }: Props) {
 
           {/* Left */}
           <div>
-            <p className="eyebrow" style={{ marginBottom: '1rem' }}>{contact.eyebrow}</p>
+            <p className="eyebrow eyebrow--on-dark" style={{ marginBottom: '1rem' }}>{contact.eyebrow}</p>
             <h2
               id="contact-heading"
               style={{
@@ -145,19 +145,7 @@ export default function Contact({ contact }: Props) {
                     {form.successBody}
                   </p>
                 </div>
-                <button
-                  onClick={() => setStatus('idle')}
-                  style={{
-                    display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                    background: 'none', border: '1px solid var(--border)',
-                    borderRadius: '4px', padding: '0.625rem 1.25rem',
-                    fontSize: 'var(--text-sm)', color: 'var(--text-muted)',
-                    cursor: 'pointer', width: 'fit-content',
-                    transition: 'border-color 0.15s ease, color 0.15s ease',
-                  }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--text-primary)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--text-primary)' }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--border)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--text-muted)' }}
-                >
+                <button onClick={() => setStatus('idle')} className="contact-reset-btn">
                   {form.backToForm}
                 </button>
               </div>

@@ -62,6 +62,11 @@
   text-transform: uppercase;
 }
 
+/* On dark backgrounds use full-brightness accent */
+.eyebrow--on-dark {
+  color: var(--accent);
+}
+
 /* ── Focus ────────────────────────────────────────── */
 :focus-visible {
   outline: 2px solid var(--accent);
@@ -442,6 +447,27 @@
   color: var(--error);
   margin-top: 0.35rem;
   letter-spacing: 0.02em;
+}
+
+.contact-reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.625rem 1.25rem;
+  font-family: var(--font-body-family);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  width: fit-content;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.contact-reset-btn:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
 }
 
 .contact-btn {
@@ -865,8 +891,8 @@ body {
   }
   .footer-legal { flex-direction: column; gap: 0.5rem; }
 
-  .project-row { grid-template-columns: 2.5rem 1fr; }
-  .project-meta { display: none; }
+  .project-row { grid-template-columns: 2.5rem 1fr auto; }
+  .project-category { display: none; }
   .project-row:hover {
     padding-left: 0;
     padding-right: 0;

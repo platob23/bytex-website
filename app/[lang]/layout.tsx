@@ -60,6 +60,19 @@ export async function generateStaticParams() {
   return [{ lang: 'de' }, { lang: 'en' }]
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Bytex',
+  url: 'https://bytex.at',
+  email: 'office@bytex.at',
+  founder: { '@type': 'Person', name: 'Tobias Plank' },
+  address: { '@type': 'PostalAddress', addressCountry: 'AT' },
+  serviceType: ['Web Development', 'SaaS Development', 'Branding'],
+  areaServed: { '@type': 'Country', name: 'Austria' },
+  sameAs: [],
+}
+
 export default async function RootLayout({
   children,
   params,
@@ -70,6 +83,12 @@ export default async function RootLayout({
       lang={lang}
       className={`${geistSans.variable} ${syne.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   )

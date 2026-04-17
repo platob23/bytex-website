@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Container from './Container'
 
 type Nav = {
@@ -27,18 +28,23 @@ export default function Footer({ nav, footer, lang }: Props) {
         <div className="footer-top-row">
           {/* Left — logo + statement */}
           <div>
-            <p
+            <Link
+              href={`/${lang}`}
+              className="nav-logo"
               style={{
+                display: 'inline-block',
                 fontFamily: 'var(--font-display-family)',
                 fontWeight: 'var(--weight-extrabold)',
                 fontSize: 'var(--text-2xl)',
                 letterSpacing: '-0.03em',
                 color: '#ffffff',
+                textDecoration: 'none',
                 marginBottom: '1rem',
+                transition: 'opacity 0.2s ease',
               }}
             >
               Bytex
-            </p>
+            </Link>
             <p
               style={{
                 fontSize: 'var(--text-sm)',

@@ -7,9 +7,10 @@ import Container from './Container'
 type NavDict = {
   services: string
   references: string
+  faq: string
   contact: string
-  ariaMenuOpen: string
-  ariaMenuClose: string
+  ariaLabelOpen: string
+  ariaLabelClosed: string
   ariaMobileNav: string
 }
 
@@ -39,11 +40,19 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
+  // Close menu on Escape key
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setMenuOpen(false) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [])
+
   const linkColor = scrolled ? 'var(--text-muted)' : 'rgba(255,255,255,0.7)'
 
   const navItems = [
     { label: nav.services, href: '#services' },
     { label: nav.references, href: '#references' },
+    { label: nav.faq, href: '#faq' },
     { label: nav.contact, href: '#contact' },
   ]
 
@@ -138,7 +147,7 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
           {/* Hamburger */}
           <button
             className="nav-hamburger"
-            aria-label={menuOpen ? nav.ariaMenuOpen : nav.ariaMenuClose}
+            aria-label={menuOpen ? nav.ariaLabelOpen : nav.ariaLabelClosed}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(v => !v)}
             style={{ color: scrolled || menuOpen ? 'var(--text-primary)' : '#ffffff' }}
@@ -158,6 +167,13 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
 
       {/* Mobile menu */}
       {menuOpen && (
+        <>
+        {/* Backdrop — closes menu on outside click */}
+        <div
+          aria-hidden="true"
+          style={{ position: 'fixed', inset: 0, top: '68px', zIndex: 48 }}
+          onClick={() => setMenuOpen(false)}
+        />
         <nav className="nav-mobile-menu" aria-label={nav.ariaMobileNav}>
           {navItems.map(({ label, href }) => (
             <a
@@ -177,6 +193,7 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
             {altLang.toUpperCase()}
           </Link>
         </nav>
+        </>
       )}
     </>
   )

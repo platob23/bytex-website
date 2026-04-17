@@ -22,6 +22,7 @@ export default function Hero({ hero }: Props) {
         src="/hero-bg.jpg"
         alt=""
         fill
+        sizes="100vw"
         style={{ objectFit: 'cover', objectPosition: 'center 60%' }}
         priority
         quality={90}
@@ -39,16 +40,7 @@ export default function Hero({ hero }: Props) {
           <div style={{ maxWidth: '680px' }}>
 
             {/* Eyebrow */}
-            <p
-              style={{
-                color: 'var(--accent)',
-                fontSize: 'var(--text-xs)',
-                fontWeight: 'var(--weight-semibold)' as React.CSSProperties['fontWeight'],
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase' as React.CSSProperties['textTransform'],
-                marginBottom: '1.5rem',
-              }}
-            >
+            <p className="eyebrow eyebrow--on-dark" style={{ marginBottom: '1.5rem' }}>
               {hero.eyebrow}
             </p>
 

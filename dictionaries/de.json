@@ -9,9 +9,10 @@
   "nav": {
     "services": "Leistungen",
     "references": "Referenzen",
+    "faq": "FAQ",
     "contact": "Kontakt",
-    "ariaMenuOpen": "Menü schließen",
-    "ariaMenuClose": "Menü öffnen",
+    "ariaLabelOpen": "Menü schließen",
+    "ariaLabelClosed": "Menü öffnen",
     "ariaMobileNav": "Mobilmenü"
   },
   "process": {

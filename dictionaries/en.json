@@ -9,9 +9,10 @@
   "nav": {
     "services": "Services",
     "references": "References",
+    "faq": "FAQ",
     "contact": "Contact",
-    "ariaMenuOpen": "Close menu",
-    "ariaMenuClose": "Open menu",
+    "ariaLabelOpen": "Close menu",
+    "ariaLabelClosed": "Open menu",
     "ariaMobileNav": "Mobile menu"
   },
   "process": {
