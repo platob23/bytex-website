@@ -109,17 +109,17 @@ export default function Contact({ contact }: Props) {
               id="contact-heading"
               style={{
                 fontFamily: 'var(--font-body-family)',
-                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                fontSize: 'var(--heading-section)',
                 fontWeight: 'var(--weight-extrabold)',
                 lineHeight: 'var(--leading-tight)',
                 letterSpacing: '-0.03em',
-                color: '#ffffff',
+                color: 'var(--on-dark)',
                 marginBottom: '1.25rem',
               }}
             >
               {contact.headline}
             </h2>
-            <p style={{ fontSize: 'var(--text-sm)', color: 'rgba(255,255,255,0.55)', lineHeight: 'var(--leading-loose)', maxWidth: '340px' }}>
+            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--on-dark-muted)', lineHeight: 'var(--leading-loose)', maxWidth: '340px' }}>
               {contact.subtext}
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1.5rem' }}>
