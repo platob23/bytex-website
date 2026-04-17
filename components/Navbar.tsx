@@ -8,8 +8,8 @@ type NavDict = {
   services: string
   references: string
   contact: string
-  ariaMenuOpen: string
-  ariaMenuClose: string
+  ariaLabelOpen: string
+  ariaLabelClosed: string
   ariaMobileNav: string
 }
 
@@ -145,7 +145,7 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
           {/* Hamburger */}
           <button
             className="nav-hamburger"
-            aria-label={menuOpen ? nav.ariaMenuOpen : nav.ariaMenuClose}
+            aria-label={menuOpen ? nav.ariaLabelOpen : nav.ariaLabelClosed}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(v => !v)}
             style={{ color: scrolled || menuOpen ? 'var(--text-primary)' : '#ffffff' }}

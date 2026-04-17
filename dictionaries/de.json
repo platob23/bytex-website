@@ -10,8 +10,8 @@
     "services": "Leistungen",
     "references": "Referenzen",
     "contact": "Kontakt",
-    "ariaMenuOpen": "Menü schließen",
-    "ariaMenuClose": "Menü öffnen",
+    "ariaLabelOpen": "Menü schließen",
+    "ariaLabelClosed": "Menü öffnen",
     "ariaMobileNav": "Mobilmenü"
   },
   "process": {
