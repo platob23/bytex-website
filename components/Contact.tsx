@@ -124,7 +124,7 @@ export default function Contact({ contact }: Props) {
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1.5rem' }}>
               <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: 'var(--success)', flexShrink: 0 }} />
-              <span style={{ fontSize: 'var(--text-xs)', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.04em' }}>
+              <span style={{ fontSize: 'var(--text-xs)', fontWeight: 'var(--weight-semibold)', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.04em' }}>
                 {contact.available}
               </span>
             </div>
@@ -223,7 +223,7 @@ export default function Contact({ contact }: Props) {
                 </div>
 
                 {status === 'error' && (
-                  <p style={{ fontSize: 'var(--text-xs)', color: 'var(--error)', marginTop: '-0.25rem' }} role="alert">
+                  <p style={{ fontSize: 'var(--text-xs)', fontWeight: 'var(--weight-semibold)', color: 'var(--error)', marginTop: '-0.25rem' }} role="alert">
                     {form.error}
                   </p>
                 )}

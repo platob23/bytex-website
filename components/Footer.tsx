@@ -73,7 +73,8 @@ export default function Footer({ nav, footer, lang }: Props) {
           <span
             style={{
               fontSize: 'var(--text-xs)',
-              color: 'rgba(255, 255, 255, 0.45)',
+              fontWeight: 'var(--weight-semibold)',
+              color: 'rgba(255, 255, 255, 0.46)',
               letterSpacing: '0.03em',
             }}
           >
