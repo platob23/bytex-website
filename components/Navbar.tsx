@@ -39,6 +39,13 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
+  // Close menu on Escape key
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setMenuOpen(false) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [])
+
   const linkColor = scrolled ? 'var(--text-muted)' : 'rgba(255,255,255,0.7)'
 
   const navItems = [
@@ -158,6 +165,13 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
 
       {/* Mobile menu */}
       {menuOpen && (
+        <>
+        {/* Backdrop — closes menu on outside click */}
+        <div
+          aria-hidden="true"
+          style={{ position: 'fixed', inset: 0, top: '68px', zIndex: 48 }}
+          onClick={() => setMenuOpen(false)}
+        />
         <nav className="nav-mobile-menu" aria-label={nav.ariaMobileNav}>
           {navItems.map(({ label, href }) => (
             <a
@@ -177,6 +191,7 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
             {altLang.toUpperCase()}
           </Link>
         </nav>
+        </>
       )}
     </>
   )
