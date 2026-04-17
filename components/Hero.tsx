@@ -22,6 +22,7 @@ export default function Hero({ hero }: Props) {
         src="/hero-bg.jpg"
         alt=""
         fill
+        sizes="100vw"
         style={{ objectFit: 'cover', objectPosition: 'center 60%' }}
         priority
         quality={90}
