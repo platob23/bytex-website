@@ -10,7 +10,7 @@
   --accent-from:   #FF6B2C;
   --accent-to:     #FF9500;
   --accent:        #FF6B2C;
-  --accent-text:   #C05000;
+  --accent-text:   #B84B00;
   --border-accent: rgba(255, 107, 44, 0.25);
 
   /* Text */
@@ -22,7 +22,7 @@
 
   /* Semantic */
   --success:       #00A876;
-  --error:         #E53935;
+  --error:         #D63434;
 
   /* Typography — families */
   --font-display-family: var(--font-display), sans-serif;
@@ -222,7 +222,7 @@
 }
 
 .project-row:hover .project-number {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .project-name {
@@ -236,7 +236,7 @@
 }
 
 .project-row:hover .project-name {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .project-description {
@@ -292,7 +292,7 @@
 }
 
 .project-row:hover .project-link {
-  color: var(--accent);
+  color: var(--accent-text);
   gap: 0.7rem;
 }
 
@@ -398,6 +398,7 @@
 
 .footer-email {
   font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
   color: var(--on-dark-muted);
   text-decoration: none;
   letter-spacing: 0.03em;
@@ -468,6 +469,7 @@
 
 .contact-field-error {
   font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
   color: var(--error);
   margin-top: 0.35rem;
   letter-spacing: 0.02em;
@@ -552,7 +554,7 @@
   display: block;
   font-size: var(--text-xs);
   font-weight: var(--weight-semibold);
-  color: var(--accent);
+  color: var(--accent-text);
   letter-spacing: 0.1em;
   margin-bottom: 0.4rem;
 }
@@ -584,6 +586,7 @@
 
 .legal-dt {
   font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
   letter-spacing: 0.04em;
   color: var(--text-muted);
   padding: 0.7rem 0;
@@ -603,7 +606,7 @@
 }
 
 .legal-link {
-  color: var(--accent);
+  color: var(--accent-text);
   text-decoration: none;
 }
 
@@ -643,7 +646,7 @@
 }
 
 .faq-trigger:hover .faq-question {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .faq-icon {
