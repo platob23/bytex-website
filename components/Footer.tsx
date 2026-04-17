@@ -37,7 +37,7 @@ export default function Footer({ nav, footer, lang }: Props) {
                 fontWeight: 'var(--weight-extrabold)',
                 fontSize: 'var(--text-2xl)',
                 letterSpacing: '-0.03em',
-                color: '#ffffff',
+                color: 'var(--on-dark)',
                 textDecoration: 'none',
                 marginBottom: '1rem',
                 transition: 'opacity 0.2s ease',
@@ -48,7 +48,7 @@ export default function Footer({ nav, footer, lang }: Props) {
             <p
               style={{
                 fontSize: 'var(--text-sm)',
-                color: 'rgba(255,255,255,0.5)',
+                color: 'var(--on-dark-muted)',
                 lineHeight: 'var(--leading-snug)',
                 whiteSpace: 'pre-line',
                 maxWidth: '260px',

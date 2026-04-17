@@ -73,7 +73,7 @@ const TimelineItemContent = memo(function TimelineItemContent({ step }: { step: 
     <div style={{ marginTop: "1.25rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
       <ul style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
         {step.responsibilities.map((r, i) => (
-          <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", fontSize: "var(--text-sm)", color: "rgba(255,255,255,0.55)" }}>
+          <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", fontSize: "var(--text-sm)", color: "var(--on-dark-muted)" }}>
             <span style={{
               width: "5px", height: "5px", borderRadius: "50%",
               backgroundColor: "var(--accent)", flexShrink: 0, marginTop: "0.45rem"
@@ -87,11 +87,11 @@ const TimelineItemContent = memo(function TimelineItemContent({ step }: { step: 
           <span key={i} style={{
             display: "inline-flex", alignItems: "center",
             padding: "0.25rem 0.75rem",
-            fontSize: "0.7rem",
+            fontSize: "var(--text-xs)",
             fontWeight: "var(--weight-semibold)",
             letterSpacing: "0.04em",
             backgroundColor: "rgba(255,255,255,0.06)",
-            color: "rgba(255,255,255,0.5)",
+            color: "var(--on-dark-muted)",
             borderRadius: "2px",
             border: "1px solid rgba(255,255,255,0.08)",
           }}>
@@ -161,7 +161,7 @@ const TimelineItem = memo(function TimelineItem({
                   display: "flex", alignItems: "center", gap: "0.5rem",
                   marginTop: "0.25rem",
                   fontSize: "var(--text-xs)",
-                  color: "rgba(255,255,255,0.5)",
+                  color: "var(--on-dark-muted)",
                   letterSpacing: "0.02em",
                 }}>
                   <span>{step.type}</span>
@@ -222,7 +222,7 @@ function ProfessionalTimeline({ steps }: { steps: Step[] }) {
 // ── Section ────────────────────────────────────────────────────────────────
 export default function Process({ process }: Props) {
   return (
-    <section className="section-py" style={{ backgroundColor: "#0d0d12", color: "#ffffff" }} aria-labelledby="process-heading">
+    <section className="section-py" style={{ backgroundColor: "#0d0d12", color: "var(--on-dark)" }} aria-labelledby="process-heading">
       <Container>
         <div className="process-grid">
 
@@ -231,11 +231,11 @@ export default function Process({ process }: Props) {
             <p className="eyebrow eyebrow--on-dark" style={{ marginBottom: "1.25rem" }}>{process.eyebrow}</p>
             <h2 id="process-heading" style={{
               fontFamily: "var(--font-body-family)",
-              fontSize: "clamp(2rem, 3.5vw, 2.75rem)",
+              fontSize: "var(--heading-section)",
               fontWeight: "var(--weight-extrabold)",
               lineHeight: "var(--leading-tight)",
               letterSpacing: "-0.03em",
-              color: "#ffffff",
+              color: "var(--on-dark)",
               marginBottom: "1.5rem",
             }}>
               {process.headline}
