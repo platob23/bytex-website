@@ -24,7 +24,7 @@ export default function BackToTop() {
         height: '44px',
         borderRadius: '4px',
         backgroundColor: 'var(--accent)',
-        color: '#fff',
+        color: 'var(--on-dark)',
         border: 'none',
         cursor: 'pointer',
         display: 'flex',

@@ -4,6 +4,7 @@ import Container from './Container'
 type Nav = {
   services: string
   references: string
+  faq: string
   contact: string
 }
 
@@ -37,7 +38,7 @@ export default function Footer({ nav, footer, lang }: Props) {
                 fontWeight: 'var(--weight-extrabold)',
                 fontSize: 'var(--text-2xl)',
                 letterSpacing: '-0.03em',
-                color: '#ffffff',
+                color: 'var(--on-dark)',
                 textDecoration: 'none',
                 marginBottom: '1rem',
                 transition: 'opacity 0.2s ease',
@@ -48,7 +49,7 @@ export default function Footer({ nav, footer, lang }: Props) {
             <p
               style={{
                 fontSize: 'var(--text-sm)',
-                color: 'rgba(255,255,255,0.35)',
+                color: 'var(--on-dark-muted)',
                 lineHeight: 'var(--leading-snug)',
                 whiteSpace: 'pre-line',
                 maxWidth: '260px',
@@ -62,6 +63,7 @@ export default function Footer({ nav, footer, lang }: Props) {
           <nav className="footer-nav">
             <a href="#services" className="footer-link">{nav.services}</a>
             <a href="#references" className="footer-link">{nav.references}</a>
+            <a href="#faq" className="footer-link">{nav.faq}</a>
             <a href="#contact" className="footer-link">{nav.contact}</a>
           </nav>
         </div>
@@ -73,7 +75,8 @@ export default function Footer({ nav, footer, lang }: Props) {
           <span
             style={{
               fontSize: 'var(--text-xs)',
-              color: 'rgba(255, 255, 255, 0.25)',
+              fontWeight: 'var(--weight-semibold)',
+              color: 'rgba(255, 255, 255, 0.46)',
               letterSpacing: '0.03em',
             }}
           >

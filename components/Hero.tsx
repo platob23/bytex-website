@@ -48,11 +48,11 @@ export default function Hero({ hero }: Props) {
             <h1
               style={{
                 fontFamily: 'var(--font-body-family)',
-                fontSize: 'clamp(2.5rem, 6vw, 5rem)',
-                fontWeight: 800,
+                fontSize: 'var(--heading-hero)',
+                fontWeight: 'var(--weight-extrabold)',
                 lineHeight: 'var(--leading-tight)',
                 letterSpacing: '-0.03em',
-                color: '#fff',
+                color: 'var(--on-dark)',
                 marginBottom: '1.5rem',
                 whiteSpace: 'pre-line',
               }}
@@ -81,6 +81,7 @@ export default function Hero({ hero }: Props) {
             >
               {hero.cta}
             </ArrowButton>
+
 
           </div>
         </Container>

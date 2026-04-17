@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Container from './Container'
 
@@ -25,6 +25,8 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
   const [scrolled, setScrolled] = useState(forceScrolled ?? false)
   const [menuOpen, setMenuOpen] = useState(false)
   const altLang = lang === 'de' ? 'en' : 'de'
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
+  const menuRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     if (forceScrolled) return
@@ -40,12 +42,38 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
-  // Close menu on Escape key
+  // Close menu on Escape key, return focus to hamburger
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setMenuOpen(false) }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && menuOpen) {
+        setMenuOpen(false)
+        hamburgerRef.current?.focus()
+      }
+    }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
-  }, [])
+  }, [menuOpen])
+
+  // Focus first link when menu opens; trap Tab within menu
+  useEffect(() => {
+    if (!menuOpen) return
+    const menu = menuRef.current
+    if (!menu) return
+    const focusable = Array.from(menu.querySelectorAll<HTMLElement>('a'))
+    focusable[0]?.focus()
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus() }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus() }
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [menuOpen])
 
   const linkColor = scrolled ? 'var(--text-muted)' : 'rgba(255,255,255,0.7)'
 
@@ -146,9 +174,11 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
 
           {/* Hamburger */}
           <button
+            ref={hamburgerRef}
             className="nav-hamburger"
             aria-label={menuOpen ? nav.ariaLabelOpen : nav.ariaLabelClosed}
             aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
             onClick={() => setMenuOpen(v => !v)}
             style={{ color: scrolled || menuOpen ? 'var(--text-primary)' : '#ffffff' }}
           >
@@ -174,7 +204,7 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
           style={{ position: 'fixed', inset: 0, top: '68px', zIndex: 48 }}
           onClick={() => setMenuOpen(false)}
         />
-        <nav className="nav-mobile-menu" aria-label={nav.ariaMobileNav}>
+        <nav id="mobile-menu" ref={menuRef} className="nav-mobile-menu" aria-label={nav.ariaMobileNav}>
           {navItems.map(({ label, href }) => (
             <a
               key={href}

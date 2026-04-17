@@ -37,7 +37,7 @@ export default function Services({ services }: Props) {
               id="services-heading"
               style={{
                 fontFamily: 'var(--font-body-family)',
-                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                fontSize: 'var(--heading-section)',
                 fontWeight: 'var(--weight-extrabold)',
                 lineHeight: 'var(--leading-tight)',
                 letterSpacing: '-0.03em',

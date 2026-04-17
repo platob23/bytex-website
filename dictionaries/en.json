@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "Web Development · SaaS · Branding",
     "headline": "Digital solutions\nthat work.",
-    "subtext": "Custom websites and web-based SaaS applications for startups, small businesses, and independent professionals.",
+    "subtext": "Custom websites and web-based SaaS applications for startups, businesses, and independent professionals.",
     "cta": "Start a project",
     "ctaSecondary": "Learn more"
   },
@@ -105,6 +105,7 @@
     "eyebrow": "Contact",
     "headline": "Start a project",
     "subtext": "Briefly describe what you need — I'll get back to you within 24 hours.",
+    "available": "Currently available for new projects",
     "form": {
       "name": "Name",
       "namePlaceholder": "John Smith",

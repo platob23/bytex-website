@@ -16,12 +16,12 @@ const ChevronUp = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const IconMessage = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg aria-hidden="true" {...props} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg aria-hidden="true" {...props} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
   </svg>
 );
 const IconFile = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg aria-hidden="true" {...props} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg aria-hidden="true" {...props} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
     <polyline points="14 2 14 8 20 8"/>
     <line x1="16" y1="13" x2="8" y2="13"/>
@@ -29,14 +29,14 @@ const IconFile = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 const IconCode = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg aria-hidden="true" {...props} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg aria-hidden="true" {...props} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="m18 16 4-4-4-4"/>
     <path d="m6 8-4 4 4 4"/>
     <path d="m14.5 4-5 16"/>
   </svg>
 );
 const IconRocket = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg aria-hidden="true" {...props} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg aria-hidden="true" {...props} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
     <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
     <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
@@ -73,7 +73,7 @@ const TimelineItemContent = memo(function TimelineItemContent({ step }: { step: 
     <div style={{ marginTop: "1.25rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
       <ul style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
         {step.responsibilities.map((r, i) => (
-          <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", fontSize: "var(--text-sm)", color: "rgba(255,255,255,0.55)" }}>
+          <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", fontSize: "var(--text-sm)", color: "var(--on-dark-muted)" }}>
             <span style={{
               width: "5px", height: "5px", borderRadius: "50%",
               backgroundColor: "var(--accent)", flexShrink: 0, marginTop: "0.45rem"
@@ -87,11 +87,11 @@ const TimelineItemContent = memo(function TimelineItemContent({ step }: { step: 
           <span key={i} style={{
             display: "inline-flex", alignItems: "center",
             padding: "0.25rem 0.75rem",
-            fontSize: "0.7rem",
+            fontSize: "var(--text-xs)",
             fontWeight: "var(--weight-semibold)",
             letterSpacing: "0.04em",
             backgroundColor: "rgba(255,255,255,0.06)",
-            color: "rgba(255,255,255,0.5)",
+            color: "var(--on-dark-muted)",
             borderRadius: "2px",
             border: "1px solid rgba(255,255,255,0.08)",
           }}>
@@ -117,8 +117,8 @@ const TimelineItem = memo(function TimelineItem({
     <li style={{ position: "relative" }}>
       {/* Marker */}
       <div style={{
-        position: "absolute", left: "1px", top: "1.25rem",
-        width: "24px", height: "24px", borderRadius: "50%",
+        position: "absolute", left: "0px", top: "1.25rem",
+        width: "28px", height: "28px", borderRadius: "50%",
         backgroundColor: "rgba(255,107,44,0.12)",
         border: "1px solid rgba(255,107,44,0.35)",
         display: "flex", alignItems: "center", justifyContent: "center",
@@ -161,7 +161,7 @@ const TimelineItem = memo(function TimelineItem({
                   display: "flex", alignItems: "center", gap: "0.5rem",
                   marginTop: "0.25rem",
                   fontSize: "var(--text-xs)",
-                  color: "rgba(255,255,255,0.35)",
+                  color: "var(--on-dark-muted)",
                   letterSpacing: "0.02em",
                 }}>
                   <span>{step.type}</span>
@@ -222,7 +222,7 @@ function ProfessionalTimeline({ steps }: { steps: Step[] }) {
 // ── Section ────────────────────────────────────────────────────────────────
 export default function Process({ process }: Props) {
   return (
-    <section className="section-py" style={{ backgroundColor: "#0d0d12", color: "#ffffff" }} aria-labelledby="process-heading">
+    <section className="section-py" style={{ backgroundColor: "#0d0d12", color: "var(--on-dark)" }} aria-labelledby="process-heading">
       <Container>
         <div className="process-grid">
 
@@ -231,11 +231,11 @@ export default function Process({ process }: Props) {
             <p className="eyebrow eyebrow--on-dark" style={{ marginBottom: "1.25rem" }}>{process.eyebrow}</p>
             <h2 id="process-heading" style={{
               fontFamily: "var(--font-body-family)",
-              fontSize: "clamp(2rem, 3.5vw, 2.75rem)",
+              fontSize: "var(--heading-section)",
               fontWeight: "var(--weight-extrabold)",
               lineHeight: "var(--leading-tight)",
               letterSpacing: "-0.03em",
-              color: "#ffffff",
+              color: "var(--on-dark)",
               marginBottom: "1.5rem",
             }}>
               {process.headline}
