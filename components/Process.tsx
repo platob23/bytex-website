@@ -161,7 +161,7 @@ const TimelineItem = memo(function TimelineItem({
                   display: "flex", alignItems: "center", gap: "0.5rem",
                   marginTop: "0.25rem",
                   fontSize: "var(--text-xs)",
-                  color: "rgba(255,255,255,0.35)",
+                  color: "rgba(255,255,255,0.5)",
                   letterSpacing: "0.02em",
                 }}>
                   <span>{step.type}</span>
