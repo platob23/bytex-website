@@ -23,7 +23,7 @@ export default function BackToTop() {
         width: '44px',
         height: '44px',
         borderRadius: '4px',
-        backgroundColor: 'var(--text-primary)',
+        backgroundColor: 'var(--accent)',
         color: '#fff',
         border: 'none',
         cursor: 'pointer',
