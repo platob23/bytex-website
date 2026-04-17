@@ -4,8 +4,7 @@
     "headline": "Digitale Lösungen,\ndie funktionieren.",
     "subtext": "Individuelle Websites und webbasierte SaaS-Anwendungen für Startups, kleine Unternehmen und Selbständige.",
     "cta": "Projekt anfragen",
-    "ctaSecondary": "Mehr erfahren",
-    "available": "Aktuell verfügbar für neue Projekte"
+    "ctaSecondary": "Mehr erfahren"
   },
   "nav": {
     "services": "Leistungen",
@@ -106,6 +105,7 @@
     "eyebrow": "Kontakt",
     "headline": "Projekt anfragen",
     "subtext": "Kurz beschreiben, was Sie benötigen – ich melde mich innerhalb von 24 Stunden.",
+    "available": "Aktuell verfügbar für neue Projekte",
     "form": {
       "name": "Name",
       "namePlaceholder": "Max Mustermann",

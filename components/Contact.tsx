@@ -29,6 +29,7 @@ type ContactDict = {
   eyebrow: string
   headline: string
   subtext: string
+  available: string
   form: ContactForm
 }
 
@@ -121,6 +122,12 @@ export default function Contact({ contact }: Props) {
             <p style={{ fontSize: 'var(--text-sm)', color: 'rgba(255,255,255,0.55)', lineHeight: 'var(--leading-loose)', maxWidth: '340px' }}>
               {contact.subtext}
             </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1.5rem' }}>
+              <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: 'var(--success)', flexShrink: 0 }} />
+              <span style={{ fontSize: 'var(--text-xs)', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.04em' }}>
+                {contact.available}
+              </span>
+            </div>
           </div>
 
           {/* Right — white card */}

@@ -8,7 +8,6 @@ type HeroDict = {
   subtext: string
   cta: string
   ctaSecondary: string
-  available: string
 }
 
 type Props = {
@@ -83,20 +82,6 @@ export default function Hero({ hero }: Props) {
               {hero.cta}
             </ArrowButton>
 
-            {/* Availability */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1.25rem' }}>
-              <span style={{
-                width: '7px', height: '7px', borderRadius: '50%',
-                backgroundColor: 'var(--success)', flexShrink: 0,
-              }} />
-              <span style={{
-                fontSize: 'var(--text-xs)',
-                color: 'rgba(255,255,255,0.45)',
-                letterSpacing: '0.04em',
-              }}>
-                {hero.available}
-              </span>
-            </div>
 
           </div>
         </Container>
