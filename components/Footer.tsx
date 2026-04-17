@@ -48,7 +48,7 @@ export default function Footer({ nav, footer, lang }: Props) {
             <p
               style={{
                 fontSize: 'var(--text-sm)',
-                color: 'rgba(255,255,255,0.35)',
+                color: 'rgba(255,255,255,0.5)',
                 lineHeight: 'var(--leading-snug)',
                 whiteSpace: 'pre-line',
                 maxWidth: '260px',
@@ -73,7 +73,7 @@ export default function Footer({ nav, footer, lang }: Props) {
           <span
             style={{
               fontSize: 'var(--text-xs)',
-              color: 'rgba(255, 255, 255, 0.25)',
+              color: 'rgba(255, 255, 255, 0.45)',
               letterSpacing: '0.03em',
             }}
           >
