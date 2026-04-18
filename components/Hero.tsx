@@ -23,7 +23,8 @@ export default function Hero({ hero }: Props) {
         alt="Modern web development workspace"
         fill
         sizes="100vw"
-        style={{ objectFit: 'cover', objectPosition: 'center 60%' }}
+        style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
+        className="hero-bg-img"
         priority
         quality={90}
       />
