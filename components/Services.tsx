@@ -49,12 +49,12 @@ export default function Services({ services }: Props) {
           </div>
 
           <p
+            className="services-subtext"
             style={{
               fontSize: 'var(--text-base)',
               lineHeight: 'var(--leading-loose)',
               color: 'var(--text-muted)',
               maxWidth: '400px',
-              justifySelf: 'end',
             }}
           >
             {services.subtext}
@@ -73,7 +73,7 @@ export default function Services({ services }: Props) {
         </div>
 
         {/* CTA */}
-        <div style={{ display: 'flex', justifyContent: 'flex-end', paddingTop: '3rem' }}>
+        <div className="services-cta">
           <ArrowButton href="#contact" variant="dark">{services.cta}</ArrowButton>
         </div>
 

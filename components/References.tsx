@@ -33,16 +33,7 @@ export default function References({ references }: Props) {
       <Container>
 
         {/* Header */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'flex-end',
-            marginBottom: '5rem',
-            gap: '2rem',
-            flexWrap: 'wrap',
-          }}
-        >
+        <div className="references-header">
           <div>
             <p className="eyebrow" style={{ marginBottom: '1rem' }}>{references.eyebrow}</p>
             <h2
