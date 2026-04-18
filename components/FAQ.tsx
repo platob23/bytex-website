@@ -96,7 +96,7 @@ export default function FAQ({ faq }: Props) {
 
             <div>
               {faq.items.map((item, i) => (
-                <FaqRow key={i} item={item} index={i} />
+                <FaqRow key={item.question} item={item} index={i} />
               ))}
             </div>
           </div>

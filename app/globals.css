@@ -306,6 +306,18 @@
 }
 
 /* ── Hero ─────────────────────────────────────────── */
+.hero-bg-img {
+  object-position: center 40% !important;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .hero-bg-img { object-position: center 30% !important; }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero-bg-img { object-position: center 50% !important; }
+}
+
 .hero-inner {
   display: flex;
   flex-direction: column;
