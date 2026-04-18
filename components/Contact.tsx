@@ -48,6 +48,7 @@ export default function Contact({ contact }: Props) {
   const { form } = contact
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
   const [errors, setErrors] = useState<FieldErrors>({})
+  const [formKey, setFormKey] = useState(0)
 
   function validate(data: FormData): FieldErrors {
     const errs: FieldErrors = {}
@@ -79,15 +80,21 @@ export default function Contact({ contact }: Props) {
       message: data.get('message'),
     }
 
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 8000)
+
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(payload),
+        signal: controller.signal,
       })
+      clearTimeout(timeout)
       const json = await res.json()
       setStatus(json.success ? 'success' : 'error')
     } catch {
+      clearTimeout(timeout)
       setStatus('error')
     }
   }
@@ -152,12 +159,12 @@ export default function Contact({ contact }: Props) {
                     {form.successBody}
                   </p>
                 </div>
-                <button onClick={() => setStatus('idle')} className="contact-reset-btn">
+                <button onClick={() => { setStatus('idle'); setFormKey(k => k + 1) }} className="contact-reset-btn">
                   {form.backToForm}
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              <form key={formKey} onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div className="contact-fields-row">
                   <div>
                     <label htmlFor="contact-name" className="contact-label">{form.name}</label>

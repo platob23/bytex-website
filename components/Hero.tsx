@@ -20,7 +20,7 @@ export default function Hero({ hero }: Props) {
       {/* Background image */}
       <Image
         src="/hero-bg.jpg"
-        alt=""
+        alt="Modern web development workspace"
         fill
         sizes="100vw"
         style={{ objectFit: 'cover', objectPosition: 'center 60%' }}
