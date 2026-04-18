@@ -35,7 +35,7 @@ export default function Hero({ hero }: Props) {
       <div className="relative z-10 flex flex-col h-full">
 
         {/* Hero copy — vertically centered */}
-        <div className="flex flex-col justify-center flex-1 pb-24">
+        <div className="hero-inner">
         <Container>
           <div style={{ maxWidth: '680px' }}>
 
@@ -74,14 +74,15 @@ export default function Hero({ hero }: Props) {
             </p>
 
             {/* CTA */}
-            <ArrowButton
-              href="#contact"
-              variant="primary"
-              style={{ padding: '1.125rem 2.5rem', fontSize: 'var(--text-base)' }}
-            >
-              {hero.cta}
-            </ArrowButton>
-
+            <div className="hero-cta-wrap">
+              <ArrowButton
+                href="#contact"
+                variant="primary"
+                style={{ padding: '1.125rem 2.5rem', fontSize: 'var(--text-base)' }}
+              >
+                {hero.cta}
+              </ArrowButton>
+            </div>
 
           </div>
         </Container>
