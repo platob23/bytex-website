@@ -13,6 +13,7 @@ type Project = {
 type ReferencesDict = {
   eyebrow: string
   headline: string
+  subtext: string
   projectCount: string
   visitLabel: string
   projects: Project[]
@@ -45,10 +46,21 @@ export default function References({ references }: Props) {
                 lineHeight: 'var(--leading-tight)',
                 letterSpacing: '-0.03em',
                 color: 'var(--text-primary)',
+                marginBottom: '1.25rem',
               }}
             >
               {references.headline}
             </h2>
+            <p
+              style={{
+                fontSize: 'var(--text-sm)',
+                color: 'var(--text-muted)',
+                lineHeight: 'var(--leading-loose)',
+                maxWidth: '400px',
+              }}
+            >
+              {references.subtext}
+            </p>
           </div>
 
         </div>

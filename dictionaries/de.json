@@ -72,13 +72,14 @@
   "references": {
     "eyebrow": "Referenzen",
     "headline": "Ausgewählte Projekte",
+    "subtext": "Eine Auswahl abgeschlossener Projekte — jedes von Grund auf entwickelt, termingerecht geliefert.",
     "projectCount": "Projekte",
     "visitLabel": "besuchen",
     "projects": [
       {
         "number": "01",
         "name": "CityGlow",
-        "description": "Marketing-Website für eine Event-Discovery-App. Modernes, energiereiches Design mit klarem Fokus auf mobile Nutzererfahrung und App-Downloads.",
+        "description": "CityGlow brauchte eine Launchpräsenz, noch bevor die App verfügbar war. Entwickelt mit Next.js — konversionsorientiertes Layout, animierte Sektionen und App-Store-Links — pünktlich zum Launch-Tag fertig.",
         "category": "App Marketing Website",
         "tags": ["Web Design", "App Marketing", "Next.js"],
         "url": "https://cityglow.app",
@@ -87,7 +88,7 @@
       {
         "number": "02",
         "name": "Jurifor",
-        "description": "Professioneller Webauftritt für eine Rechtsberatung. Klare Struktur, vertrauensbildendes Design und unkomplizierte Kontaktaufnahme im Vordergrund.",
+        "description": "Eine Kanzlei ohne digitale Präsenz musste schnell Vertrauen aufbauen. Das Ergebnis: ein klarer WordPress-Auftritt mit strukturierten Leistungsseiten, DSGVO-konformem Kontaktweg und lokalem SEO — fertig in drei Wochen.",
         "category": "Kanzlei-Website",
         "tags": ["Corporate", "WordPress", "Legal"],
         "url": "https://jurifor.at",
@@ -96,7 +97,7 @@
     ]
   },
   "footer": {
-    "statement": "Proudly built\nin Austria. 🇦🇹",
+    "statement": "Proudly built\nin Austria.",
     "impressum": "Impressum",
     "datenschutz": "Datenschutzerklärung"
   },
@@ -104,13 +105,14 @@
     "eyebrow": "Kontakt",
     "headline": "Projekt anfragen",
     "subtext": "Kurz beschreiben, was Sie benötigen – ich melde mich innerhalb von 24 Stunden.",
-    "available": "Aktuell verfügbar für neue Projekte",
+    "available": "Aktuell verfügbar für neue Projekte — Stand April 2026",
     "form": {
       "name": "Name",
       "namePlaceholder": "Max Mustermann",
       "email": "E-Mail",
       "emailPlaceholder": "max@beispiel.at",
       "service": "Was benötigen Sie?",
+      "servicePlaceholder": "Passende Leistung auswählen ...",
       "serviceOptions": [
         "Website / Landingpage",
         "SaaS / Web-App",
@@ -126,7 +128,7 @@
       "successTitle": "Nachricht erhalten.",
       "successBody": "Danke für Ihre Anfrage — ich melde mich innerhalb von 24 Stunden.",
       "backToForm": "Neue Anfrage stellen",
-      "error": "Etwas ist schiefgelaufen. Bitte versuche es nochmal.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
       "errRequired": "Pflichtfeld",
       "errEmail": "Ungültige E-Mail-Adresse",
       "errSelect": "Bitte auswählen"
@@ -135,7 +137,7 @@
   "faq": {
     "eyebrow": "FAQ",
     "headline": "Häufig gestellte Fragen",
-    "subtext": "Die wichtigsten Antworten auf einen Blick. Und wenn noch etwas offen bleibt – einfach fragen!",
+    "subtext": "Noch offene Fragen? Einfach melden.",
     "items": [
       {
         "question": "Wie lange dauert es, bis meine Website fertig ist?",
@@ -148,6 +150,14 @@
       {
         "question": "Wie viel kostet eine individuelle SaaS-Lösung?",
         "answer": "Der Preis richtet sich nach Funktionsumfang, Komplexität und Zeitplan. Ich arbeite grundsätzlich mit Festpreisangeboten – keine versteckten Kosten. Nach einem kurzen Erstgespräch erhalten Sie ein konkretes Angebot."
+      },
+      {
+        "question": "Muss ich Texte und Inhalte selbst liefern?",
+        "answer": "Nicht zwingend. Sie können bestehende Texte und Bilder bereitstellen, oder wir erarbeiten die Inhaltsstruktur gemeinsam im Konzept-Schritt. Bei größerem Textbedarf empfehle ich Ihnen auf Wunsch erfahrene Texter."
+      },
+      {
+        "question": "Was passiert, wenn sich der Projektumfang ändert?",
+        "answer": "Kleinere Anpassungen innerhalb des vereinbarten Rahmens gehören zur normalen Projektrealität. Wenn sich die Anforderungen wesentlich ändern, besprechen wir die Auswirkungen auf Zeitplan und Preis offen – keine Überraschungsrechnungen, immer vorab abgestimmt."
       }
     ]
   },

@@ -20,9 +20,8 @@ type Props = {
   faq: FaqDict
 }
 
-function FaqRow({ item, index }: { item: FaqItem; index: number }) {
-  const [open, setOpen] = useState(false)
-  const toggle = useCallback(() => setOpen((v) => !v), [])
+function FaqRow({ item, index, open, onToggle }: { item: FaqItem; index: number; open: boolean; onToggle: (index: number) => void }) {
+  const toggle = useCallback(() => onToggle(index), [onToggle, index])
   const id = `faq-answer-${index}`
 
   return (
@@ -56,6 +55,11 @@ function FaqRow({ item, index }: { item: FaqItem; index: number }) {
 }
 
 export default function FAQ({ faq }: Props) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const handleToggle = useCallback((index: number) => {
+    setOpenIndex((prev) => (prev === index ? null : index))
+  }, [])
+
   return (
     <section
       id="faq"
@@ -96,7 +100,7 @@ export default function FAQ({ faq }: Props) {
 
             <div>
               {faq.items.map((item, i) => (
-                <FaqRow key={item.question} item={item} index={i} />
+                <FaqRow key={item.question} item={item} index={i} open={openIndex === i} onToggle={handleToggle} />
               ))}
             </div>
           </div>
