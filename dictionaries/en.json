@@ -72,13 +72,14 @@
   "references": {
     "eyebrow": "References",
     "headline": "Selected projects",
+    "subtext": "A selection of past work — each built from scratch, delivered on time.",
     "projectCount": "Projects",
     "visitLabel": "visit",
     "projects": [
       {
         "number": "01",
         "name": "CityGlow",
-        "description": "Marketing website for an event discovery app. Modern, high-energy design with a clear focus on mobile user experience and app downloads.",
+        "description": "CityGlow needed a launch presence before the app shipped. Built a high-energy Next.js marketing site with conversion-focused layout, animated sections, and app store deep links — ready on day one of launch.",
         "category": "App Marketing Website",
         "tags": ["Web Design", "App Marketing", "Next.js"],
         "url": "https://cityglow.app",
@@ -87,7 +88,7 @@
       {
         "number": "02",
         "name": "Jurifor",
-        "description": "Professional web presence for a legal consultancy. Clean structure, trust-building design, and straightforward contact flow at the forefront.",
+        "description": "A law firm with no digital presence needed to establish trust fast. Delivered a clean WordPress site with structured service pages, GDPR-compliant contact flow, and local SEO — live within three weeks.",
         "category": "Law Firm Website",
         "tags": ["Corporate", "WordPress", "Legal"],
         "url": "https://jurifor.at",
@@ -96,7 +97,7 @@
     ]
   },
   "footer": {
-    "statement": "Proudly built\nin Austria. 🇦🇹",
+    "statement": "Proudly built\nin Austria.",
     "impressum": "Impressum",
     "datenschutz": "Privacy Policy"
   },
@@ -104,13 +105,14 @@
     "eyebrow": "Contact",
     "headline": "Start a project",
     "subtext": "Briefly describe what you need — I'll get back to you within 24 hours.",
-    "available": "Currently available for new projects",
+    "available": "Currently available for new projects — as of April 2026",
     "form": {
       "name": "Name",
       "namePlaceholder": "John Smith",
       "email": "Email",
       "emailPlaceholder": "john@example.com",
       "service": "What do you need?",
+      "servicePlaceholder": "Select the service that fits your project ...",
       "serviceOptions": [
         "Website / Landing Page",
         "SaaS / Web App",
@@ -135,7 +137,7 @@
   "faq": {
     "eyebrow": "FAQ",
     "headline": "Frequently asked questions",
-    "subtext": "The most important answers at a glance. And if something is still open — just ask!",
+    "subtext": "Still have questions? Just get in touch.",
     "items": [
       {
         "question": "How long does it take until my website is finished?",
@@ -148,6 +150,14 @@
       {
         "question": "How much does a custom SaaS solution cost?",
         "answer": "The price depends on the scope of features, complexity, and timeline. I work with fixed-price quotes — no hidden costs. After a short initial call, you'll receive a concrete proposal."
+      },
+      {
+        "question": "Do I need to provide the content and copy myself?",
+        "answer": "Not necessarily. You can provide existing texts and images, or I can help you structure the content during the concept phase. For larger copy needs I can recommend trusted copywriters."
+      },
+      {
+        "question": "What happens if the project scope changes?",
+        "answer": "Small adjustments within the agreed scope are part of normal project work. If requirements change significantly, we discuss the impact on timeline and price transparently — no surprise invoices, always agreed in advance."
       }
     ]
   },

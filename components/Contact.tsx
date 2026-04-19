@@ -10,6 +10,7 @@ type ContactForm = {
   email: string
   emailPlaceholder: string
   service: string
+  servicePlaceholder: string
   serviceOptions: string[]
   message: string
   messagePlaceholder: string
@@ -207,7 +208,7 @@ export default function Contact({ contact }: Props) {
                     aria-describedby={errors.service ? 'err-service' : undefined}
                     onChange={() => setErrors(e => ({ ...e, service: undefined }))}
                   >
-                    <option value="" disabled>—</option>
+                    <option value="" disabled>{form.servicePlaceholder}</option>
                     {form.serviceOptions.map((opt) => (
                       <option key={opt} value={opt}>{opt}</option>
                     ))}
