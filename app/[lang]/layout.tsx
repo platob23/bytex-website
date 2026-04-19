@@ -10,7 +10,6 @@ const geistSans = Geist({
 const syne = Syne({
   variable: '--font-display',
   subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
 })
 
 const meta = {
