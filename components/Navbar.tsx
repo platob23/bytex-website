@@ -54,6 +54,12 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
     return () => document.removeEventListener('keydown', onKey)
   }, [menuOpen])
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+
   // Focus first link when menu opens; trap Tab within menu
   useEffect(() => {
     if (!menuOpen) return
@@ -78,10 +84,10 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
   const linkColor = scrolled ? 'var(--text-muted)' : 'rgba(255,255,255,0.7)'
 
   const navItems = [
-    { label: nav.services, href: '#services' },
-    { label: nav.references, href: '#references' },
-    { label: nav.faq, href: '#faq' },
-    { label: nav.contact, href: '#contact' },
+    { label: nav.services, href: `/${lang}#services` },
+    { label: nav.references, href: `/${lang}#references` },
+    { label: nav.faq, href: `/${lang}#faq` },
+    { label: nav.contact, href: `/${lang}#contact` },
   ]
 
   return (
@@ -130,7 +136,7 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
             <ul style={{ display: 'flex', alignItems: 'center', gap: '2.5rem', listStyle: 'none', margin: 0, padding: 0 }}>
               {navItems.map(({ label, href }) => (
                 <li key={href}>
-                  <a
+                  <Link
                     href={href}
                     className="nav-link"
                     data-scrolled={scrolled ? 'true' : 'false'}
@@ -144,7 +150,7 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
                     }}
                   >
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -206,14 +212,14 @@ export default function Navbar({ lang, nav, forceScrolled, altLangHref }: Props)
         />
         <nav id="mobile-menu" ref={menuRef} className="nav-mobile-menu" aria-label={nav.ariaMobileNav}>
           {navItems.map(({ label, href }) => (
-            <a
+            <Link
               key={href}
               href={href}
               className="nav-mobile-link"
               onClick={() => setMenuOpen(false)}
             >
               {label}
-            </a>
+            </Link>
           ))}
           <Link
             href={altLangHref ?? `/${altLang}`}

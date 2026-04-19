@@ -27,7 +27,7 @@ export default function Footer({ nav, footer, lang }: Props) {
       {/* Top row — brand left, nav right */}
       <Container>
         <div className="footer-top-row">
-          {/* Left — logo + statement */}
+          {/* Left — logo + statement + social */}
           <div>
             <Link
               href={`/${lang}`}
@@ -53,30 +53,18 @@ export default function Footer({ nav, footer, lang }: Props) {
                 lineHeight: 'var(--leading-snug)',
                 whiteSpace: 'pre-line',
                 maxWidth: '260px',
+                marginBottom: '1.25rem',
               }}
             >
               {footer.statement}
             </p>
-          </div>
-
-          {/* Right — nav links + social */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '1.5rem' }}>
-            <nav className="footer-nav">
-              <a href="#services" className="footer-link">{nav.services}</a>
-              <a href="#references" className="footer-link">{nav.references}</a>
-              <a href="#faq" className="footer-link">{nav.faq}</a>
-              <a href="#contact" className="footer-link">{nav.contact}</a>
-            </nav>
             <a
               href="https://www.instagram.com/bytex.at"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Bytex on Instagram"
-              style={{
-                color: 'var(--on-dark-muted)',
-                transition: 'color 0.2s ease',
-              }}
               className="footer-link"
+              style={{ display: 'inline-flex' }}
             >
               <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -85,6 +73,14 @@ export default function Footer({ nav, footer, lang }: Props) {
               </svg>
             </a>
           </div>
+
+          {/* Right — nav links */}
+          <nav className="footer-nav">
+            <a href="#services" className="footer-link">{nav.services}</a>
+            <a href="#references" className="footer-link">{nav.references}</a>
+            <a href="#faq" className="footer-link">{nav.faq}</a>
+            <a href="#contact" className="footer-link">{nav.contact}</a>
+          </nav>
         </div>
       </Container>
 
