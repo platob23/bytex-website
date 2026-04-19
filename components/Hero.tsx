@@ -7,7 +7,6 @@ type HeroDict = {
   headline: string
   subtext: string
   cta: string
-  ctaSecondary: string
 }
 
 type Props = {

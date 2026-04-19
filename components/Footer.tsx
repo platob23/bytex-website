@@ -59,13 +59,32 @@ export default function Footer({ nav, footer, lang }: Props) {
             </p>
           </div>
 
-          {/* Right — nav links */}
-          <nav className="footer-nav">
-            <a href="#services" className="footer-link">{nav.services}</a>
-            <a href="#references" className="footer-link">{nav.references}</a>
-            <a href="#faq" className="footer-link">{nav.faq}</a>
-            <a href="#contact" className="footer-link">{nav.contact}</a>
-          </nav>
+          {/* Right — nav links + social */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '1.5rem' }}>
+            <nav className="footer-nav">
+              <a href="#services" className="footer-link">{nav.services}</a>
+              <a href="#references" className="footer-link">{nav.references}</a>
+              <a href="#faq" className="footer-link">{nav.faq}</a>
+              <a href="#contact" className="footer-link">{nav.contact}</a>
+            </nav>
+            <a
+              href="https://www.instagram.com/bytex.at"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Bytex on Instagram"
+              style={{
+                color: 'var(--on-dark-muted)',
+                transition: 'color 0.2s ease',
+              }}
+              className="footer-link"
+            >
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </Container>
 

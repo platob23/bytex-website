@@ -3,8 +3,7 @@
     "eyebrow": "Web Development · SaaS · Branding",
     "headline": "Digital solutions\nthat work.",
     "subtext": "Custom websites and web-based SaaS applications for startups, businesses, and independent professionals.",
-    "cta": "Start a project",
-    "ctaSecondary": "Learn more"
+    "cta": "Start a project"
   },
   "nav": {
     "services": "Services",
@@ -97,7 +96,7 @@
     ]
   },
   "footer": {
-    "statement": "Built in Austria.",
+    "statement": "Proudly built\nin Austria. 🇦🇹",
     "impressum": "Impressum",
     "datenschutz": "Privacy Policy"
   },
@@ -135,7 +134,7 @@
   },
   "faq": {
     "eyebrow": "FAQ",
-    "headline": "Recently asked questions",
+    "headline": "Frequently asked questions",
     "subtext": "The most important answers at a glance. And if something is still open — just ask!",
     "items": [
       {

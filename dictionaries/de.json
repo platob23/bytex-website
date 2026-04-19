@@ -3,8 +3,7 @@
     "eyebrow": "Web Development · SaaS · Branding",
     "headline": "Digitale Lösungen,\ndie funktionieren.",
     "subtext": "Individuelle Websites und webbasierte SaaS-Anwendungen für Startups, Unternehmen und Selbständige.",
-    "cta": "Projekt anfragen",
-    "ctaSecondary": "Mehr erfahren"
+    "cta": "Projekt anfragen"
   },
   "nav": {
     "services": "Leistungen",
@@ -97,7 +96,7 @@
     ]
   },
   "footer": {
-    "statement": "Built in Austria.",
+    "statement": "Proudly built\nin Austria. 🇦🇹",
     "impressum": "Impressum",
     "datenschutz": "Datenschutzerklärung"
   },
@@ -135,7 +134,7 @@
   },
   "faq": {
     "eyebrow": "FAQ",
-    "headline": "Kürzlich gestellte Fragen",
+    "headline": "Häufig gestellte Fragen",
     "subtext": "Die wichtigsten Antworten auf einen Blick. Und wenn noch etwas offen bleibt – einfach fragen!",
     "items": [
       {
