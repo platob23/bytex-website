@@ -3,7 +3,8 @@
     "eyebrow": "Web Development · SaaS · Branding",
     "headline": "Digitale Lösungen,\ndie funktionieren.",
     "subtext": "Individuelle Websites und webbasierte SaaS-Anwendungen für Startups, Unternehmen und Selbständige.",
-    "cta": "Projekt anfragen"
+    "cta": "Projekt anfragen",
+    "available": "Aktuell verfügbar für neue Projekte"
   },
   "nav": {
     "services": "Leistungen",
@@ -148,6 +149,10 @@
         "answer": "Ja, selbstverständlich. Nach dem Launch biete ich auf Wunsch laufende Wartung und Anpassungen an. Kleinere Änderungen sind oft kurzfristig umsetzbar – sprechen Sie mich einfach an."
       },
       {
+        "question": "Wie viele Korrekturschleifen sind inbegriffen?",
+        "answer": "Jedes Projekt enthält definierte Feedback-Runden in der Konzept- und Umsetzungsphase. Anpassungen innerhalb des vereinbarten Rahmens werden ohne Aufpreis umgesetzt. Was zählt, ist das richtige Ergebnis — nicht wie viele Runden es dafür braucht."
+      },
+      {
         "question": "Wie viel kostet eine individuelle SaaS-Lösung?",
         "answer": "Der Preis richtet sich nach Funktionsumfang, Komplexität und Zeitplan. Ich arbeite grundsätzlich mit Festpreisangeboten – keine versteckten Kosten. Nach einem kurzen Erstgespräch erhalten Sie ein konkretes Angebot."
       },
@@ -161,11 +166,24 @@
       }
     ]
   },
+  "testimonials": {
+    "eyebrow": "Kundenbewertungen",
+    "headline": "Was Kunden sagen",
+    "items": [
+      {
+        "quote": "Tobias hat meine Homepage erstellt. Besonders geschätzt habe ich seine ausgesprochene Kundenorientierung. Er hat mein erklärungsbedürftiges Geschäftsmodell wirklich verstanden und das spiegelt sich in seiner Arbeit wider. Weiterhin viel Erfolg!",
+        "name": "Wolfgang Neßhold",
+        "role": "Gründer & Inhaber",
+        "company": "Jurifor"
+      }
+    ]
+  },
   "services": {
     "eyebrow": "Leistungen",
     "headline": "Was ich für Sie umsetze",
     "subtext": "Vier Leistungsbereiche — von der ersten Idee bis zum laufenden Betrieb.",
     "cta": "Projekt anfragen",
+    "techLabel": "Technologien",
     "items": [
       {
         "number": "01",

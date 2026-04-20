@@ -15,7 +15,7 @@ type Props = {
 
 export default function Hero({ hero }: Props) {
   return (
-    <section className="relative h-screen min-h-[600px]" aria-label="Hero">
+    <section className="relative h-screen min-h-[600px]" style={{ backgroundColor: 'var(--text-primary)' }} aria-label="Hero">
       {/* Background image */}
       <Image
         src="/hero-bg.jpg"
@@ -25,7 +25,7 @@ export default function Hero({ hero }: Props) {
         style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
         className="hero-bg-img"
         priority
-        quality={90}
+        quality={75}
       />
 
       {/* Dark overlay */}
