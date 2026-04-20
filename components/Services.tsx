@@ -1,5 +1,6 @@
 import Container from './Container'
 import ArrowButton from './ArrowButton'
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiSpring, SiPostgresql } from 'react-icons/si'
 
 type ServiceItem = {
   number: string
@@ -12,8 +13,17 @@ type ServicesDict = {
   headline: string
   subtext: string
   cta: string
+  techLabel: string
   items: ServiceItem[]
 }
+
+const techs = [
+  { name: 'Next.js', icon: <SiNextdotjs size={22} color="#000000" aria-hidden="true" /> },
+  { name: 'TypeScript', icon: <SiTypescript size={22} color="#3178C6" aria-hidden="true" /> },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss size={22} color="#38BDF8" aria-hidden="true" /> },
+  { name: 'Spring Boot', icon: <SiSpring size={22} color="#6DB33F" aria-hidden="true" /> },
+  { name: 'PostgreSQL', icon: <SiPostgresql size={22} color="#336791" aria-hidden="true" /> },
+]
 
 type Props = {
   services: ServicesDict
@@ -72,8 +82,19 @@ export default function Services({ services }: Props) {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="services-cta">
+        {/* Tech stack + CTA */}
+        <div className="services-bottom">
+          <div>
+            <p className="services-tech-label">{services.techLabel}</p>
+            <div className="services-tech-icons">
+              {techs.map(({ name, icon }) => (
+                <div key={name} className="services-tech-item">
+                  {icon}
+                  <span className="services-tech-name">{name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
           <ArrowButton href="#contact" variant="dark">{services.cta}</ArrowButton>
         </div>
 

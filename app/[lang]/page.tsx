@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar'
 import Hero from '../../components/Hero'
 import Services from '../../components/Services'
 import References from '../../components/References'
+import Testimonials from '../../components/Testimonials'
 import Process from '../../components/Process'
 import FAQ from '../../components/FAQ'
 import Contact from '../../components/Contact'
@@ -25,6 +26,7 @@ export default async function Page({ params }: PageProps<'/[lang]'>) {
         <Services services={dict.services} />
         <Process process={dict.process} />
         <References references={dict.references} />
+        <Testimonials testimonials={dict.testimonials} />
         <FAQ faq={dict.faq} />
         <Contact contact={dict.contact} />
       </main>

@@ -3,7 +3,8 @@
     "eyebrow": "Web Development · SaaS · Branding",
     "headline": "Digital solutions\nthat work.",
     "subtext": "Custom websites and web-based SaaS applications for startups, businesses, and independent professionals.",
-    "cta": "Start a project"
+    "cta": "Start a project",
+    "available": "Currently available for new projects"
   },
   "nav": {
     "services": "Services",
@@ -148,6 +149,10 @@
         "answer": "Yes, of course. After launch I offer ongoing maintenance and adjustments on request. Minor changes can often be implemented quickly — just reach out."
       },
       {
+        "question": "How many revision rounds are included?",
+        "answer": "Every project includes defined feedback rounds during the concept and development phases. Adjustments within the agreed scope are made at no extra charge. What matters is the right result — not how many rounds it takes to get there."
+      },
+      {
         "question": "How much does a custom SaaS solution cost?",
         "answer": "The price depends on the scope of features, complexity, and timeline. I work with fixed-price quotes — no hidden costs. After a short initial call, you'll receive a concrete proposal."
       },
@@ -161,11 +166,24 @@
       }
     ]
   },
+  "testimonials": {
+    "eyebrow": "Client Testimonials",
+    "headline": "What clients say",
+    "items": [
+      {
+        "quote": "Tobias built my website. What I particularly appreciated was his outstanding client focus. He truly understood my complex business model, and that is reflected in his work. Continued success!",
+        "name": "Wolfgang Neßhold",
+        "role": "Founder & Owner",
+        "company": "Jurifor"
+      }
+    ]
+  },
   "services": {
     "eyebrow": "Services",
     "headline": "What I build for you",
     "subtext": "Four service areas — from the first idea to ongoing operation.",
     "cta": "Start a project",
+    "techLabel": "Technologies",
     "items": [
       {
         "number": "01",
